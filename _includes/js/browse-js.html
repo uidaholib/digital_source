@@ -1,0 +1,54 @@
+<script src="{{ '/js/jquery.lazyload.js' | prepend: site.digital-assets }}"></script>
+<script>
+(function(){ 
+  /* lazy load images */
+  var $imgs = $("img.lazyload");
+  $imgs.lazyload();
+
+  /* set up browse filter function */
+  function filterItems() {
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("quickSearch");
+    filter = input.value.toUpperCase();
+    itemcontainer = document.getElementById("browseItems");
+    item = itemcontainer.getElementsByClassName("item");
+    for (i = 0; i < item.length; i++) {
+      itemcontents = item[i].getElementsByClassName("search")[0];
+      if (itemcontents) {
+        if (itemcontents.innerText.toUpperCase().indexOf(filter) > -1) {
+          item[i].style.display = "";
+        } else {
+          item[i].style.display = "none";
+        }
+      }       
+    }
+    var numberofint = $('div.card:visible').length;
+    $("#numberOf").html(numberofint);
+    $imgs.lazyload();
+    $("#goButton").focus();
+  }
+  /* filter if hash in initial URL */ 
+  var hashfilter = decodeURIComponent(location.hash.substr(1));
+  if(window.location.hash) {
+    $('#quickSearch').val(hashfilter);
+    filterItems();
+  }
+  /* add hash if search button clicked */ 
+  $('#goButton').click( function() {
+    window.location.hash = encodeURIComponent($('#quickSearch').val());
+  });
+  /* add hash if if enter is pressed */
+  $('#quickSearch').keypress(function(e){
+    if(e.which == 13){
+        window.location.hash = encodeURIComponent($('#quickSearch').val());
+      }
+  });
+  /* filter if hash changes */ 
+  $(window).on("hashchange", function() {
+    var hashfilter = decodeURIComponent(location.hash.substr(1));
+    $('#quickSearch').val(hashfilter);
+    filterItems();
+  });
+
+})();
+</script>
