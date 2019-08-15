@@ -1,0 +1,11 @@
+<div class="row campuscollections">
+    <h2>Campus Collections</h2>
+    {% for collection in site.data.digital %}{% if collection.Type contains "Campus" %}
+    <div class="col-lg-4 col-sm-6 centered">
+        <a target="_blank" href="{{ collection.Website }}">
+            <img src="https://www.lib.uidaho.edu/digital/images/small/{{collection.path }}.jpg" alt="{{ collection.ImageTitle}}">
+        </a>
+        <h3 class="name"><a target="_blank" href="{{ collection.Website }}">{{ collection.colltitle }}</a></h3>
+    </div>
+    {% endif %}{% endfor %}
+</div>

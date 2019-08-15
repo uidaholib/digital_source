@@ -1,0 +1,11 @@
+<div class="row tumblr text-white">
+    <h2 style="color:white;">CDIL Digital Scholarship Projects</h2>
+    {% for project in site.data.cdil %}
+    <div class="col-lg-4 col-sm-6 centered">
+        <a target="_blank" href="{{ project.link }}">
+            <img src="{{project.image }}" alt="{{ project.title}}">
+        </a>
+        <h3 class="name"><a target="_blank" href="{{ project.link }}">{{ project.title }}</a></h3>
+    </div>
+    {% endfor %}
+</div>
