@@ -3,6 +3,7 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     color: $black-color;
+    background-color: #ffffff;
 }
 a {
     color: $clearwater;
@@ -13,12 +14,19 @@ a {
         text-decoration: underline;
     }
 }
+/* nav */
+.nav-overlap {
+    position: absolute;
+    top: 115px;
+    width: 70%;
+    z-index: 2000;
+}
 /* banner */
 .title-card {
     background-color: #25242485;
     background-color: rgba(37, 36, 36, 0.52);
     color: white !important;
-margin:0px -22px;}
+    margin:0px -22px;}
 
 #title {
     a { 
