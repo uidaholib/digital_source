@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-4">
+        <div id="featured1"></div>
+    </div>
+    <div class="col-4">
+        <div id="featured2"></div>
+    </div>
+    <div class="col-4">
+        <div id="featured3"></div>
+    </div>
+</div>
+
+<script>
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+    var arr = [{% for collection in site.data.digital_all_collections %}{% if collection.image %}{% if forloop.last == false %} '<img src="{{ collection.image }}" class="img-thumbnail">', {%else %}'<a href="{{collection.Website}}" target="_blank"> {{ collection.shorttitle }}</a>'{% endif %}{% endif %} {% endfor %}];
+    arr = shuffle(arr);
+    document.getElementById('featured1').innerHTML = arr[0];
+    document.getElementById('featured2').innerHTML = arr[1];
+    document.getElementById('featured3').innerHTML = arr[2];
+
+</script>
