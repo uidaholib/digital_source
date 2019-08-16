@@ -4,12 +4,14 @@
     {% include head.html %}
   </head>
   <body>
+    {% include sidebar.html %}
     {% include collection-nav.html %}
     {% include collection-banner.html %}
     <main role="main">
       {{ content }}
     </main>
     {% include footer.html %}
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     {% include foot.html %}
     {% include all-collections-nav-json.html %}
   </body>
