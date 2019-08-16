@@ -3,7 +3,6 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     color: $black-color;
-    background-color: #ffffff;
 }
 a {
     color: $clearwater;
@@ -16,11 +15,11 @@ a {
 }
 /* nav */
 .nav-overlap {
-    position: absolute;
-    top: 115px;
-    width: 70%;
+    position: relative;
+    top: 35px;
     z-index: 2000;
 }
+
 /* banner */
 .title-card {
     background-color: #25242485;
@@ -41,6 +40,10 @@ a {
         font-size: 14.5px;
         line-height: 1;
     }
+}
+
+.lib-logo-lg {
+    max-height: 80px;
 }
 
 /* nav bar */
