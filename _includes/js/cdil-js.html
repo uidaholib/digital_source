@@ -1,0 +1,12 @@
+{%- assign cdil = site.data.digital_all_collections | where: "type","CDIL" -%}
+
+<script> 
+    var cdilItems = [ {% for c in cdil %}{ "title": {{ c.colltitle | jsonify }}, "image": "{{ c.image }}", "website": "{{ c.website }}", "description": "{{ c.shortdesc }}" }{% unless forloop.last %}, {% endunless %}{% endfor %}];
+    var cdilImage = document.getElementById("cdilInner");
+    cdilItems.sort(function() { return 0.5 - Math.random() });
+    var i;
+    for (i=0; i < 3; i++) {
+        card = "<div class='col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 my-3 text-center'><div class='card'><img class='card-img-top' src=" + cdilItems[i].image + " alt='Card image cap'><div class='card-body'><h5 class='card-title'>" + cdilItems[i].title + "</h5><p class='card-text'>" + cdilItems[i].description + "</p><a href='" + cdilItems[i].website + "' class='btn btn-primary'>View Project</a></div></div>";
+        cdilImage.innerHTML += card;
+    }
+</script>
