@@ -52,6 +52,14 @@ a {
     color: rgba(255,255,255,.5);
 }
 
+.navbar-default{
+  transition:500ms ease;
+  background: #343a40;
+}
+.navbar-default.scrolled{
+  background:rgba(37, 36, 36, 0.72);
+}
+
 /* item page */
 .gallery-img {
     cursor: pointer;

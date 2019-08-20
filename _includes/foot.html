@@ -13,3 +13,8 @@
 {% if page.layout == "home-infographic" %}{% include js/featured-js.html %}{% include js/cdil-js.html %}{% include js/campus-js.html %}{% endif %}
 {% if page.layout == "item" %}{% include js/arrow-page-control-js.html %}{% endif %}
 <script defer src="{{ '/fontawesome/js/all.min.js' | prepend: site.digital-assets }}"></script>
+<script>
+$(window).scroll(function(){
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+});
+</script>
