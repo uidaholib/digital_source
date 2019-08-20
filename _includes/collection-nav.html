@@ -1,16 +1,43 @@
+<nav class="py-2 navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#page-nav" aria-controls="page-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<nav class="py-2 navbar bg-dark">
-    <!-- logos -->
-    <div class="col-9 py-2 d-flex align-items-center">
-        <a id="banner-home" title="University of Idaho Library" class="navbar-brand" href="https://www.lib.uidaho.edu/">
-        <img class="img-fluid lib-logo-lg" src="{{ 'idaho.png' | relative_url }}" alt="University of Idaho Library [logo]"></a>
+        <div class="d-md-none float-right col-8">
+            <button type="button" class="btn btn p-1  float-right" data-toggle="modal" data-target="#collections">
+                <img class="img-fluid float-right" id="mobile-nav-image" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" title="University of Idaho Library Digital Initiatives" alt="digital initiatives logo"></button>
+        </div>
 
-        <a id="banner-home" title="Digital Initiatives" class="" href="{{ '/' | relative_url }}">
-        <img class="img-fluid pl-3 lib-logo-md" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" alt="Digital Initiatives [logo]"></a>
+        <div class="collapse navbar-collapse" id="page-nav">
+            <div class="py-2 d-flex align-items-center navbar-brand">
+                <a id="banner-home" title="University of Idaho Library" class="" href="https://www.lib.uidaho.edu/">
+                    <img class="img-fluid lib-logo-lg" src="{{ 'idaho.png' | relative_url }}" alt="University of Idaho Library [logo]"></a>
 
-        <!-- sidebar nav -->
-        <div class="col-3 float-right text-right d-none d-md-block">
-            {% include sidebar.html %}
+                <a id="banner-home" title="Digital Initiatives" class="" href="{{ '/' | relative_url }}">
+                    <img class="img-fluid pl-4 lib-logo-md" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" alt="Digital Initiatives [logo]"></a>
+            </div>
+
+            <ul class="navbar-nav ml-auto">
+                {% for nav in site.data.nav-configuration %}
+                {% if nav.display-text != "About" %}
+                <li class="nav-item {% if page.url == nav.stub %}active{% endif %}">
+                    <a class="nav-link " href="{{ nav.stub | relative_url }}">{{ nav.display-text }}</a>
+                </li>
+                {% else %}
+                <li class="nav-item dropdown {% if page.url == nav.stub %}active{% endif %}">
+                    <a class="nav-link dropdown-toggle" href="{{ nav.stub | relative_url }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ nav.display-text }}</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">About Us</a>
+                        <a class="dropdown-item" href="#">About the Space</a>
+                        <a class="dropdown-item" href="#">CollectionBuilder</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Policies</a>
+                    </div>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </nav>
