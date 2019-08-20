@@ -13,12 +13,6 @@ a {
         text-decoration: underline;
     }
 }
-/* nav */
-.nav-overlap {
-    position: relative;
-    top: 35px;
-    z-index: 2000;
-}
 
 /* banner */
 .title-card {
@@ -43,7 +37,12 @@ a {
 }
 
 .lib-logo-lg {
-    max-height: 80px;
+    max-height: 90px;
+    padding-left: 70px;
+}
+
+.lib-logo-md {
+  max-height: 40px;
 }
 
 /* nav bar */
