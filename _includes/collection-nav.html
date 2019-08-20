@@ -1,49 +1,16 @@
-<div class="container">
-    <div class="row py-3 align-items-center">
-        <!-- logo -->
-        <div class="col-9">
-            <a id="banner-home" title="University of Idaho Digital Collections" class="" href="{{ '/' | relative_url }}">
-                <img class="img-fluid lib-logo-lg" src="https://www.lib.uidaho.edu/digital/bannerlogo_gray_bottom.png" alt=""></a>
+
+<nav class="py-2 navbar bg-dark">
+    <!-- logos -->
+    <div class="col-9 py-2 d-flex align-items-center">
+        <a id="banner-home" title="University of Idaho Library" class="navbar-brand" href="https://www.lib.uidaho.edu/">
+        <img class="img-fluid lib-logo-lg" src="{{ 'idaho.png' | relative_url }}" alt="University of Idaho Library [logo]"></a>
+
+        <a id="banner-home" title="Digital Initiatives" class="" href="{{ '/' | relative_url }}">
+        <img class="img-fluid pl-3 lib-logo-md" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" alt="Digital Initiatives [logo]"></a>
+
+        <!-- sidebar nav -->
+        <div class="col-3 float-right text-right d-none d-md-block">
+            {% include sidebar.html %}
         </div>
-        <!-- quick search -->
-        <!--<div class="col-3 float-right text-right d-none d-md-block">
-            {% include nav-search-cdm.html %}
-        </div>-->
     </div>
-</div>
-<!--{% comment %}
-<div class="container">
-    <div class="row justify-content-center">
-        <nav class="navbar navbar-expand-md {{ site.data.theme.navbar-color }} {{ site.data.theme.navbar-background }} nav-overlap col-11">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#page-nav" aria-controls="page-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="d-md-none float-right col-8">
-                <button type="button" class="btn btn p-1  float-right" data-toggle="modal" data-target="#collections">
-                    <img class="img-fluid float-right" id="mobile-nav-image" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" title="University of Idaho Library Digital Initiatives" alt="digital initiatives logo"></button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="page-nav">
-                {% for nav in site.data.nav-configuration %}
-                {% if nav.stub == '/' %}
-                <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a class="navbar-brand mt-1" href="{{ nav.stub | relative_url }}">
-                            <img class="img-fluid" src="https://www.lib.uidaho.edu/digital/bannerlogo_gray_bottom.png" width="300" height="" alt="">
-                        </a>
-                    </li>
-                </ul>
-                {% else %}
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item {% if page.url == nav.stub %}active{% endif %}">
-                        <a class="nav-link" href="{{ nav.stub | relative_url }}">{{ nav.display-text }}</a>
-                    </li>
-                {% endif %}
-                {% endfor %}
-                </ul>
-            </div>
-        </nav>
-    </div>
-</div>
-{% endcomment %}-->
+</nav>
