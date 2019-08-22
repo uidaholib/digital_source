@@ -100,6 +100,11 @@ dt {
     right: 0;
 }
 
+.card-img-top {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
 /* footer */
 .collection-footer{
     background-color: $black-color;

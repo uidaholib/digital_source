@@ -28,13 +28,13 @@ layout: page
         <div class="col-md-9">
             <div class="row" id="browseItems">
             {% for c in collections %}
-            <div class="item col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 my-3">
+            <div class="item col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 my-3">
                 <div class="card">
                     <a href="{{ c.website }}">
                         <img class="card-img-top lazyload" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
                     </a>
                     <div class="card-body text-center search">
-                        <h3 class="card-title"><a href="{{ c.website }}" class="text-dark">{{ c.colltitle }}</a></h3>
+                        <h4 class="card-title"><a href="{{ c.website }}" class="text-dark">{{ c.colltitle }}</a></h4>
                         <p class="card-text">
 
                         </p>
@@ -45,14 +45,14 @@ layout: page
                             <a class="btn btn-sm btn-secondary m-1 filter text-wrap" href="{{ b | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ b }}</a>
                             {% endif %}{% endfor %}
                         </p>
-                        <p class="card-text">
+                        <p class="card-text"><small class="text-muted">
                             {% for f in fields %}{% if f.display-name-or-btn != 'btn' %}{% if c[f.field] %}
                             {% if f.display-name-or-btn %}<strong>{{ f.display-name-or-btn }}:</strong> {% endif %}{{ c[f.field] | truncatewords: 20 | replace: '""','"' }}
                             {% unless forloop.last %}<br>{% endunless %}
                             {% endif %}{% endif %}{% endfor %}
-                        </p>
+                        </small></p>
                         <p>
-                            <a href="{{ c.website }}" class="btn btn-clearwater" title="link to {{ c.colltitle | escape }}">View Item</a>
+                            <a href="{{ c.website }}" class="btn btn-sm btn-light text-primary" title="link to {{ c.colltitle | escape }}">View Collection</a>
                         </p>
                     </div>
                 </div>
