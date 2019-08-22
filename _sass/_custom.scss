@@ -82,21 +82,24 @@ dt {
     .next{ right:10px; }
 }
 
-/* browse */
-.item .card-title {
-    font-size:1.5rem;
-    background-color: rgba(37, 36, 36, 0.72);
-    /*
-    margin-left: -50%;
-    margin-right: -50%;
-    */
-}
+/* squares */
 .square {
+    height: 0;
     width: 100%;
     padding-bottom: 100%;
     background-size: cover;
     background-position: center;
+    /* box-shadow: 0 3px 12px rgba(#2d2d2e, .9); */
 }
+
+.background .card-title {
+    background:rgba(37, 36, 36, 0.829);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
 /* footer */
 .collection-footer{
     background-color: $black-color;
