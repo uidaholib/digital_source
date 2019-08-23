@@ -199,7 +199,26 @@ color: #606E8C; }
 #cloud {
 margin: 0px 30px 30px;
 padding: 4px; }
-  
+
+/* sidebar */
+
+#sidebar {
+    background: $nav-background;
+}
+#page-nav {
+    //width: 250px;
+    font-size:18px;
+    a {
+        font-weight: 300 !important;
+    }
+    li { border-color: #d5d5d5 !important; }
+}
+.dropdown-toggle::after {
+    margin-left: 15px;
+}
+.page-block { 
+    background: $background-color;
+}
 
 /* all Collections nav */
 .ijclist{
