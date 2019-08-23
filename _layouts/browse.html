@@ -6,14 +6,12 @@ layout: page
 
 {{ content }}
 
-<div class="container">
-
     <div class="row mb-3 justify-content-center">
         <div class="col-md-8 text-center">
             <div class="input-group input-group-lg">
                 <input type="text" class="form-control form-control-lg" id="quickSearch" placeholder="Filter ... ">
                 <div class="input-group-append">
-                    <button class="btn btn-success" type="button" title="Search" alt="Search" id="goButton">Search</button>
+                    <button class="btn btn-palouse-green" type="button" title="Search" alt="Search" id="goButton">Search</button>
                     <a class="btn btn-outline-secondary filter" href="#" data-filter="">Reset</a>
                 </div>
             </div>
@@ -22,13 +20,10 @@ layout: page
     </div>
 
     <div class="row">
-        <div class="col-md-3">
-            {% include index/browse-collections.html %}
-        </div>
-        <div class="col-md-9">
+        <div class="col-md-12">
             <div class="row" id="browseItems">
             {% for c in collections %}
-            <div class="item col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 my-3">
+            <div class="item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 my-3">
                 <div class="card">
                     <a href="{{ c.website }}">
                         <img class="card-img-top lazyload" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
@@ -50,9 +45,10 @@ layout: page
                             {% if f.display-name-or-btn %}<strong>{{ f.display-name-or-btn }}:</strong> {% endif %}{{ c[f.field] | truncatewords: 20 | replace: '""','"' }}
                             {% unless forloop.last %}<br>{% endunless %}
                             {% endif %}{% endif %}{% endfor %}
+                            <hr>
                         </small></p>
                         <p>
-                            <a href="{{ c.website }}" class="btn btn-sm btn-light text-primary" title="link to {{ c.colltitle | escape }}">View Collection</a>
+                            <a href="{{ c.website }}" class="btn btn-light clearwater" title="link to {{ c.colltitle | escape }}" target="_blank" rel="noopener">View Collection</a>
                         </p>
                     </div>
                 </div>
@@ -61,4 +57,3 @@ layout: page
         </div>
         </div>
     </div>
-</div>
