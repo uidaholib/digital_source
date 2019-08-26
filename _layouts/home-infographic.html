@@ -5,13 +5,16 @@ layout: home
 <div class="row py-1">
   <div class="col-md-12">
     {% include index/featured-collections.html %}
-    <hr>
-    {% include index/campus-collections.html %}
   </div>
 </div>
 
+<hr>
+
 <div class="row py-3">
-  <div class="col-md-12">
+  <div class="col-md-6">
+    {% include index/campus-collections.html %}
+  </div>
+  <div class="col-md-6">
     {% include index/cdil-projects.html %}
   </div>
 </div>
