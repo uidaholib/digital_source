@@ -1,13 +1,16 @@
 {%- assign featured = site.data.digital_all_collections -%}
 <script> 
-    var featuredItems = [ {% for f in featured %}{ "title": {{ f.colltitle | jsonify }}, "image": "{{ f.image }}", "website": "{{ f.website }}" }{% unless forloop.last %}, {% endunless %}{% endfor %}];
+    var featuredItems = [ {% for f in featured %}{ "title": {{ f.colltitle | jsonify }}, "image": "{{ f.image }}", "website": "{{ f.website }}", "description": "{{ f.shortdesc }}" }{% unless forloop.last %}, {% endunless %}{% endfor %}];
     var featuredImage = document.getElementById("featuredInner");
     featuredItems.sort(function() { return 0.5 - Math.random() });
     var i;
     for (i=0; i < 4; i++) {
-        image = "<div class='background col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 my-3'><a href='" + featuredItems[i].website + "'><div class='card square' style='background-image: url(" + featuredItems[i].image + ")'><div class='card-body'></div></div></a></div>";
+        image = "<div class='col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 my-3'><a href='" + featuredItems[i].website + "' data-toggle='tooltip' data-placement='bottom' title='" + featuredItems[i].description + "'><div class='card square' style='background-image: url(" + featuredItems[i].image + ")'><div class='card-body'><h5 class='card-title text-white text-center py-2'>" + featuredItems[i].title + "</h5></div></div></a></div>";
         featuredImage.innerHTML += image;
     }
+    $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
 </script>
 
 <!--card titles-->
