@@ -9,19 +9,19 @@
 <script>
     function search_all() {
         var query = document.getElementById("search-all").value;
-        window.open("https://lib.uidaho.edu/digital/browse.html#" + encodeURI(query) , "_blank" );
+        window.open("{{ '/browse.html' | relative_url }}#" + encodeURI(query) , "_blank" );
     }
 </script>
 <div id="home-banner" class="jumbotron jumbotron-fluid mb-0 p-0" aria-label="{{ site.data.theme.home-banner-image-title }}">
     <div class="container">
         <div class="row justify-content-center">
             <div id="home-title-box" class="col-md-8 text-center">
-                <form class="form-inline" role="search" id="search" onsubmit="search_all(); return false;">
+                <form role="search" id="search" onsubmit="search_all(); return false;">
                 <div class="input-group input-group-lg">
                     <input type="text" class="form-control form-control-lg" id="search-all" placeholder="Find a collection" > 
                     <div class="input-group-append">
                         <button class="btn btn-clearwater" type="submit" title="Search" alt="Search" id="search-all-button" >Search</button>
-                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal" data-backdrop="false">Browse</button>
+                        <button type="button" class="btn btn-secondary" data-backdrop="false">Browse</button>
                     </div>
                 </div>
             </div>
@@ -33,27 +33,3 @@
 </div>
 
 {%- endif -%}
-
-<!--
-<script>
-function cdm_search_all() {
-    var query = document.getElementById("cdm-search-all").value;
-    window.open("https://digital.lib.uidaho.edu/digital/search/searchterm/" + encodeURI(query) + "/field/all/mode/all/conn/and/order/nosort/ad/asc", "_blank" );
-}
-</script>
-<div class="row align-items-center mb-3">
-<div class="col-md-6">
-    <h4 class="mt-2">All Collections</h4>
-</div>
-<div class="col-md-6">
-    <form class="form-inline" role="search" id="search" onsubmit="cdm_search_all(); return false;">
-    <div class="input-group">
-        <input id="cdm-search-all" type="text" class="form-control" placeholder="Search all collections..." aria-label="Search all collections" aria-describedby="search-all-button">
-        <div class="input-group-append">
-        <button class="btn btn-pride-gold" type="submit" id="search-all-button">Go</button>
-        </div>
-    </div>
-    </form>
-</div>
-</div>
--->
