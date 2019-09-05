@@ -6,16 +6,16 @@ layout: page
 
 {{ content }}
 
-    <div class="row mb-3 justify-content-center">
+    <div class="row mb-3 justify-content-center py-5">
         <div class="col-md-8 text-center">
             <div class="input-group input-group-lg">
                 <input type="text" class="form-control form-control-lg" id="quickSearch" placeholder="Filter ... ">
                 <div class="input-group-append">
-                    <button class="btn btn-palouse-green" type="button" title="Search" alt="Search" id="goButton">Search</button>
+                    <button class="btn btn-clearwater" type="button" title="Search" alt="Search" id="goButton">Search</button>
                     <a class="btn btn-outline-secondary filter" href="#" data-filter="">Reset</a>
                 </div>
             </div>
-            <span class="info2 h2"><span id="numberOf">{{ collections | size }}</span> of {{ collections | size }} items</span>
+            <span class="info2 h2"><span id="numberOf">{{ collections | size }}</span> of {{ collections | size }} collections</span>
         </div>
     </div>
 

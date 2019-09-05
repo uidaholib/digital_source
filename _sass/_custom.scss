@@ -210,8 +210,21 @@ padding: 4px; }
 /* sidebar */
 
 #sidebar {
-    background: $nav-background;
+    position: fixed;
+    height: 100%;
+    width: 100%;
 }
+
+#sidenav {
+    font-size:18px;
+    margin-top: 25px;
+    a {
+        font-weight: 300 !important;
+        color: $text-color;
+    }
+    li { border-color: #d5d5d5 !important; }
+}
+
 #page-nav {
     //width: 250px;
     font-size:18px;
