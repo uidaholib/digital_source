@@ -1,8 +1,9 @@
+{% assign buttons = site.data.browsebuttons %}
 {% if page.layout == "home-infographic" %}
 <style>
 #home-title-box {
     padding-top: 12em;
-    padding-bottom: 12em;
+    padding-bottom: 2em;
 }
 </style>
 
@@ -25,8 +26,22 @@
                     </div>
                 </div>
             </div>
-
-        </div>         
+        </div>
+        
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 text-center pb-5">
+                <div class="card mb-5" style="background:rgba(52, 58, 64, 0.8)">
+                    <div class="card-body">
+                        <h5 class="card-title text-light">Search Suggested Topics:</h5>
+                            {% for b in buttons %}
+                            {% if b.button == 'btn' %}
+                            <a role="button" class="btn btn-light my-2 mx-1" href="{{ b.title | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ b.title }}</a>
+                            {% endif %}
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <div id="feature-image" class="text-right p-1"></div>

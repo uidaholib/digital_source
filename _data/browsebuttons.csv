@@ -1,27 +1,29 @@
-title,category
-UI Campus,Locations
-Idaho,Locations
-Latah County,Locations
-Moscow,Locations
-Northwest,Locations
-Potlatch,Locations
-University of Idaho,Locations
-Agriculture,Subjects
-Dams,Subjects
-Fire,Subjects
-Forests,Subjects
-Jazz,Subjects
-Labor,Subjects
-Maps,Subjects
-Mining,Subjects
-Native Americans,Subjects
-Rangeland,Subjects
-Sports,Subjects
-UI Research,Subjects
-Water,Subjects
-Wilderness,Subjects
-Audio,Media Types
-Documents,Media Types
-Maps,Media Types
-Photographs,Media Types
-Video,Media Types
+title,category,button
+Campus,Locations,
+Idaho,Locations,
+Latah County,Locations,
+Moscow,Locations,
+Northwest,Locations,
+Potlatch,Locations,
+University of Idaho,Locations,
+Agriculture,Subjects,btn
+Dams,Subjects,btn
+Fire,Subjects,btn
+Forests,Subjects,btn
+Jazz,Subjects,btn
+Labor,Subjects,
+Maps,Subjects,
+Mining,Subjects,btn
+Native Americans,Subjects,
+Oral History,Subjects,btn
+Rangeland,Subjects,
+Religion,Subjects,btn
+Sports,Subjects,
+UI Research,Subjects,
+Water,Subjects,
+Wilderness,Subjects,btn
+Audio,Media Types,
+Documents,Media Types,
+Maps,Media Types,
+Photographs,Media Types,
+Video,Media Types,
