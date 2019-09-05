@@ -11,7 +11,7 @@
                     {% for f in filters %}
                     {% if f.category == 'Locations' %}
                     <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
-                        <a href="{{ f.title | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ f.title }}</a>
+                        <a href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title }}</a>
                     </li>
                     {% endif %}
                     {% endfor %}
@@ -23,7 +23,7 @@
                     {% for f in filters %}
                     {% if f.category == 'Subjects' %}
                     <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
-                        <a href="{{ f.title | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ f.title }}</a>
+                        <a href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title }}</a>
                     </li>
                     {% endif %}
                     {% endfor %}
@@ -35,7 +35,7 @@
                     {% for f in filters %}
                     {% if f.category == 'Media Types' %}
                     <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
-                        <a href="{{ f.title | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ f.title }}</a>
+                        <a href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title }}</a>
                     </li>
                     {% endif %}
                     {% endfor %}

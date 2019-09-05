@@ -10,7 +10,7 @@
 <script>
     function search_all() {
         var query = document.getElementById("search-all").value;
-        window.open("{{ '/browse.html' | relative_url }}#" + encodeURI(query) , "_blank" );
+        window.open("{{ '/collections.html' | relative_url }}#" + encodeURI(query) , "_blank" );
     }
 </script>
 <div id="home-banner" class="jumbotron jumbotron-fluid mb-0 p-0" aria-label="{{ site.data.theme.home-banner-image-title }}">
@@ -35,7 +35,7 @@
                         <h5 class="card-title text-light">Search Suggested Topics:</h5>
                             {% for b in buttons %}
                             {% if b.button == 'btn' %}
-                            <a role="button" class="btn btn-light my-2 mx-1" href="{{ b.title | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ b.title }}</a>
+                            <a role="button" class="btn btn-light my-2 mx-1" href="{{ b.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ b.title }}</a>
                             {% endif %}
                             {% endfor %}
                     </div>

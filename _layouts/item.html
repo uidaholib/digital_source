@@ -6,7 +6,7 @@ gallery: true
 <div class="container py-3">
     <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ '/' | absolute_url }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ '/browse.html' | absolute_url }}">Items</a></li>
+        <li class="breadcrumb-item"><a href="{{ '/collections.html' | absolute_url }}">Items</a></li>
         <li class="breadcrumb-item active">{{ page.title | truncatewords: 10 }}</li>
     </ul>
 
@@ -61,7 +61,7 @@ gallery: true
                         {% if f.browse-link == "true" %}
                         {% assign topics = page[f.field] | split: ";" %}
                         {% for t in topics %}
-                            <a class="filter mr-3" data-filter="{{ t | strip | escape }}" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a> 
+                            <a class="filter mr-3" data-filter="{{ t | strip | escape }}" href="{{ t | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ t | strip }}</a> 
                         {% endfor %}
                         {% else %}
                         {{ page[f.field] | replace: '""','"' }}{% endif %}
@@ -81,7 +81,7 @@ gallery: true
                     {% assign facets = page.subject | split: ";" %}
                     <p>
                     {% for f in facets %}
-                        <a class="btn btn-sm btn-secondary m-1" href="{{ f | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ f }}</a> 
+                        <a class="btn btn-sm btn-secondary m-1" href="{{ f | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f }}</a> 
                     {% endfor %}
                     </p>
                 </div>
@@ -131,7 +131,7 @@ gallery: true
 {%- assign forward_url = site.data[site.data.theme.metadata][forward].object-id | append: '.html' | prepend: '/items/' | relative_url -%}
     <div class="text-center">
         <a class="btn btn-secondary" href="{{ back_url }}" role="button" id="prev-page-button">&laquo; Previous</a>
-        <a class="btn btn-secondary" href="{{ '/browse.html' | relative_url }}" role="button">| Back to browse |</a>
+        <a class="btn btn-secondary" href="{{ '/collections.html' | relative_url }}" role="button">| Back to browse |</a>
         <a class="btn btn-secondary" href="{{ forward_url }}" role="button" id="next-page-button">Next &raquo;</a>
     </div>
     <div id="item-nav">
