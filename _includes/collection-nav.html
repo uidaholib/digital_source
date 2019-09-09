@@ -10,8 +10,8 @@
         </div>
 
         <div class="collapse navbar-collapse" id="page-nav">
-            <div class="d-flex align-items-center navbar-brand">
-                <a id="banner-home" title="University of Idaho Library" class="" href="https://www.lib.uidaho.edu/">
+            <div class="d-flex py-2 align-items-center navbar-brand">
+                <a id="banner-home" title="University of Idaho" class="" href="https://www.lib.uidaho.edu/">
                     <img class="img-fluid pr-4 lib-logo-lg" src="{{ 'idaho.png' | relative_url }}" alt="University of Idaho Library [logo]"></a>
     
                 <a id="banner-home" title="Digital Initiatives" class="" href="{{ '/' | relative_url }}">
@@ -25,15 +25,8 @@
                     <a class="nav-link " href="{{ nav.stub | relative_url }}">{{ nav.display-text }}</a>
                 </li>
                 {% else %}
-                <li class="nav-item dropdown {% if page.url == nav.stub %}active{% endif %}">
-                    <a class="nav-link dropdown-toggle" href="{{ nav.stub | relative_url }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ nav.display-text }}</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ nav.stub | relative_url }}#">About Us</a>
-                        <a class="dropdown-item" href="{{ nav.stub | relative_url }}#">About the Space</a>
-                        <a class="dropdown-item" href="{{ nav.stub | relative_url }}#">CollectionBuilder</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{ nav.stub | relative_url }}#">Policies</a>
-                    </div>
+                <li class="nav-item {% if page.url contains '/about/' %}active{% endif %}">
+                    <a class="nav-link" href="{{ '/about/' | relative_url }}">About</a>
                 </li>
                 {% endif %}
                 {% endfor %}

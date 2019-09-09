@@ -1,0 +1,12 @@
+# About Section
+About:
+  - parent: About
+    stub: /about/
+  - subsection: About Us
+    link: /about/
+  - subsection: Our Space
+    link: /about/space.html
+  - subsection: CollectionBuilder
+    link: /about/cb.html
+  - subsection: Policies
+    link: /about/policies.html
