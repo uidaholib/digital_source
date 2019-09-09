@@ -28,11 +28,11 @@
                 <li class="nav-item dropdown {% if page.url == nav.stub %}active{% endif %}">
                     <a class="nav-link dropdown-toggle" href="{{ nav.stub | relative_url }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ nav.display-text }}</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">About Us</a>
-                        <a class="dropdown-item" href="#">About the Space</a>
-                        <a class="dropdown-item" href="#">CollectionBuilder</a>
+                        <a class="dropdown-item" href="{{ nav.stub | relative_url }}#">About Us</a>
+                        <a class="dropdown-item" href="{{ nav.stub | relative_url }}#">About the Space</a>
+                        <a class="dropdown-item" href="{{ nav.stub | relative_url }}#">CollectionBuilder</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Policies</a>
+                        <a class="dropdown-item" href="{{ nav.stub | relative_url }}#">Policies</a>
                     </div>
                 </li>
                 {% endif %}
