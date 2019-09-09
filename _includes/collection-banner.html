@@ -10,7 +10,7 @@
 <script>
     function search_all() {
         var query = document.getElementById("search-all").value;
-        window.open("{{ '/collections.html' | relative_url }}#" + encodeURI(query) , "_blank" );
+        window.open("{{ '/collections.html' | relative_url }}#" + encodeURI(query) , "_self" );
     }
 </script>
 <div id="home-banner" class="jumbotron jumbotron-fluid mt-5 p-0" aria-label="{{ site.data.theme.home-banner-image-title }}">
