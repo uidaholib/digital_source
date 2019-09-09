@@ -5,7 +5,11 @@
   </head>
   <body>
     {% include collection-nav.html %}
+    {% if page.layout == "home-infographic" %}
+    <div class="pt-5">
     {% include collection-banner.html %}
+    </div>
+    {% endif %}
     <main role="main">
       {{ content }}
     </main>
