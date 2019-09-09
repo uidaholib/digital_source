@@ -6,7 +6,7 @@
     cdilItems.sort(function() { return 0.5 - Math.random() });
     var i;
     for (i=0; i < 3; i++) {
-        card = "<div class='col-md-10 my-3'><div class='card text-center border-dark'><img class='card-img-top' src=" + cdilItems[i].image + " alt='Card image cap'><div class='card-body'><h4 class='card-title'><a href='" + cdilItems[i].website + "'>" + cdilItems[i].title + "</a></h4><p class='card-text'>" + cdilItems[i].description + "</p></div><div class='card-footer'><a href='" + cdilItems[i].website + "' class='btn btn-clearwater'>View Project</a></div></div></div>";
+        card = "<div class='col-md-10 my-3'><div class='card text-center border-secondary'><img class='card-img-top' src=" + cdilItems[i].image + " alt='Card image cap'><div class='card-body'><h4 class='card-title'><a href='" + cdilItems[i].website + "'>" + cdilItems[i].title + "</a></h4><p class='card-text'>" + cdilItems[i].description + "</p></div><div class='card-footer'><a href='" + cdilItems[i].website + "' class='btn btn-clearwater'>View Project</a></div></div></div>";
         cdilImage.innerHTML += card;
     }
 </script>
