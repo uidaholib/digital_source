@@ -10,3 +10,14 @@ About:
     link: /about/cb.html
   - subsection: Policies
     link: /about/policies.html
+
+# Visualize Section
+Visualize:
+  - parent: Visualize
+    stub: /visualize/
+  - subsection: Visualize
+    link: /visualize/
+  - subsection: Subjects
+    link: /visualize/subjects.html
+  - subsection: Locations
+    link: /visualize/locations.html
