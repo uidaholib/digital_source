@@ -1,7 +1,6 @@
 display-text,stub
 Home,/
-About,about.html
+About,/about/
 Collections,/collections.html
-Timeline,/timeline.html
-Locations,/locations.html
+Visualize,/visualize/
 Map,/map.html
