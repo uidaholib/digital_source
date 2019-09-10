@@ -55,7 +55,7 @@ a {
     max-height: 80px;
 }
 
-.dig-logo-md {
+.lib-logo-md {
     max-height: 40px;
 }
 
@@ -151,8 +151,14 @@ dt {
     object-fit: cover;
 }
 
-/* collection cards */
+.collection-img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
 
+/* collection cards */
+/*
 .custom-card {
     display: inline-block;
     position: relative;
@@ -186,6 +192,7 @@ dt {
 .img-raised {
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
+*/
 
 .btn-round{
     border-radius: 30px;

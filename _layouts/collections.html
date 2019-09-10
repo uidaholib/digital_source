@@ -24,14 +24,14 @@ layout: page
         <div class="row" id="browseItems">
             {% for c in collections %}
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 my-3">
-                <div class="custom-card my-4">
-                    <div class="card-image">
-                        <a href="{{ c.website }}">
-                            <img class="img img-raised lazyload" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
-                        </a>
-                    </div>
+                <div class="card mb-3">
                     <div class="card-body text-center search">
                         <h4 class="card-title mt-2"><a href="{{ c.website }}" class="text-dark">{{ c.colltitle }}</a></h4>
+                        <div class="card-image">
+                            <a href="{{ c.website }}">
+                                <img class="collection-img lazyload mt-1 mb-3 px-2 img-fluid" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
+                            </a>
+                        </div>
                         <p>
                             {%- capture btns -%}{% for f in fields %}{% if f.display-name-or-btn == 'btn' %}{{ c[f.field] | strip }};{% endif %}{% endfor %}{%- endcapture -%}
                             {%- assign btns = btns | split: ';' | compact -%}
