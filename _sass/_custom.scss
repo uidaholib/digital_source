@@ -301,9 +301,9 @@ padding: 4px; }
 
 #sidebar {
     position: fixed;
-    height: 100%;
+    height: 600px;
     width: 100%;
-    overflow: auto;
+    overflow-y: scroll;
     top: 23%;
 }
 

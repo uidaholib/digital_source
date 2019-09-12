@@ -5,9 +5,9 @@
     <h3>Search by:</h3>
     <hr>
     <nav id="sidenav" class="pt-3">
-        <ul class="list-unstyled components">
+        <ul class="list-unstyled components" id="accordion">
             <li class="border-bottom border-top py-2 pl-1 pr-4">
-                <a href="#locations" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Locations</a>
+                <a href="#locations" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">Locations</a>
                 <ul class="collapse list-unstyled" id="locations">
                     {% for f in filters %}
                     {% if f.category == 'Locations' %}
@@ -19,7 +19,7 @@
                 </ul>
             </li>
             <li class="border-bottom py-2 pl-1 pr-4">
-                <a href="#subjects" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Subjects</a>
+                <a href="#subjects" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">Subjects</a>
                 <ul class="collapse list-unstyled" id="subjects">
                     {% for f in filters %}
                     {% if f.category == 'Subjects' %}
@@ -31,10 +31,34 @@
                 </ul>
             </li>
             <li class="border-bottom py-2 pl-1 pr-4">
-                <a href="#media-types" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Media Types</a>
+                <a href="#media-types" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">Media Types</a>
                 <ul class="collapse list-unstyled" id="media-types">
                     {% for f in filters %}
                     {% if f.category == 'Media Types' %}
+                    <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
+                        <a href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+            <li class="border-bottom py-2 pl-1 pr-4">
+                <a href="#idaho" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">Idaho</a>
+                <ul class="collapse list-unstyled" id="idaho">
+                    {% for f in filters %}
+                    {% if f.category == 'Idaho' %}
+                    <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
+                        <a href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+            <li class="border-bottom py-2 pl-1 pr-4">
+                <a href="#university" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">University of Idaho</a>
+                <ul class="collapse list-unstyled" id="university">
+                    {% for f in filters %}
+                    {% if f.category == 'University of Idaho' %}
                     <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
                         <a href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title }}</a>
                     </li>
