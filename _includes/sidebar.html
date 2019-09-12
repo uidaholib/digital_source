@@ -1,12 +1,12 @@
 {% assign filters = site.data.browsebuttons %}
 {% assign page-nav = site.data.pagesnav %}
-<div id="sidebar" class="py-3 border-right d-none d-md-block pl-5">
+<div id="sidebar" class="border-right d-none d-md-block pl-5">
     {% if page.url contains 'collections' %}
-    <h3 class="pt-3">Search by:</h3>
+    <h3>Search by:</h3>
     <hr>
-    <nav id="sidenav">
+    <nav id="sidenav" class="pt-3">
         <ul class="list-unstyled components">
-            <li class="border-bottom py-2 pl-1 pr-4">
+            <li class="border-bottom border-top py-2 pl-1 pr-4">
                 <a href="#locations" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Locations</a>
                 <ul class="collapse list-unstyled" id="locations">
                     {% for f in filters %}
@@ -45,6 +45,8 @@
         </ul>
     </nav>
     {% else %}
+    <h3>{{ page.title }}</h3>
+    <hr>
     <nav id="sidenav">
         <ul class="list-unstyled components">
             {% for sub in page-nav[page.section] %}

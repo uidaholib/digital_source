@@ -1,5 +1,5 @@
 ---
-title: About Digital Initiatives
+title: About
 section: About
 permalink: /about/
 layout: page
