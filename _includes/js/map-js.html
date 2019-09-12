@@ -67,10 +67,10 @@ if(window.location.hash) {
         pointToLayer: function(feature,latlng){
             var marker = L.marker(latlng);
             marker.bindPopup('<h3>' + feature.properties.title + 
-            '</h3><p><a class="btn btn-light" href="' + feature.properties.web + '"><img class="mapthumb" src="' + feature.properties.image + '" /></a>' +
+            '</h3><p><a class="btn btn-light" href="' + feature.properties.web + '"><img class="mapthumb img-fluid" src="' + feature.properties.image + '" /></a>' +
             {% for f in fields %}{% if f.display %}
             '<br><strong>{{ f.display }}:</strong> ' + feature.properties.{{ f.field }} + {% endif %}{% endfor %}
-            '<br><a class="btn btn-light" href="{% if site.data.theme.repo-link %}{{ site.data.theme.cdm-url }}/cdm/ref/collection/{{ site.data.theme.cdm-collection-id }}/id/' + feature.properties.cdm + '{% else %}{{ site.baseurl }}/items/' + feature.properties.id + '.html{% endif %}" >View Item</a></p>');
+            '<br><a class="btn btn-light" href="' + feature.properties.web + '" >View Item</a></p>');
             return marker;
         }, 
         onEachFeature: function (feature, layer) {
