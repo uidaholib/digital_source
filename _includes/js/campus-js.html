@@ -6,7 +6,7 @@
     campusItems.sort(function() { return 0.5 - Math.random() });
     var i;
     for (i=0; i < 3; i++) {
-        card = "<div class='col-md-10 my-3'><div class='card text-center border-secondary'><img class='card-img-top' src=" + campusItems[i].image + " alt='Card image cap'><div class='card-body'><h4 class='card-title'><a href='" + campusItems[i].website + "'>" + campusItems[i].title + "</a></h4><p class='card-text'>" + campusItems[i].description + "</p></div><div class='card-footer'><a href='" + campusItems[i].website + "' class='btn btn-clearwater'>View Project</a></div></div></div>";
+        card = "<div class='col-md-10 my-3'><div class='card text-center border-secondary'><img class='card-img-top' src=" + campusItems[i].image + " alt='Card image cap'><div class='card-body border-top'><h4 class='card-title'><a href='" + campusItems[i].website + "'>" + campusItems[i].title + "</a></h4><p class='card-text'>" + campusItems[i].description + "</p></div><div class='card-footer'><a href='" + campusItems[i].website + "' class='btn btn-clearwater btn-round'>View Collection</a></div></div></div>";
         campusImage.innerHTML += card;
     }
 </script>
