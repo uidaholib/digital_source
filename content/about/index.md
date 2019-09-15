@@ -15,18 +15,18 @@ But, again, digitizing is not all we do. We also work with departments, schools,
 
 ## Our History
 
-The department was established in 2008 with an initial charge to digitize and make accessible the library's renowned International Jazz Collections. Material from the Jazz Collections continue to be added to this day, and we continue to build on our collections. We currently maintain over 70 digital collections and applications, and work that begun in the lab has now been incoporated into a library department, Data and Digital Services, and a University center, the Center for Digital Inquiry and Learning (CDIL). CDIL is a collaboration between the library and the College of Letters, Arts, and Social Sciences (CLASS) that intends to improve the capacity for digital scholarship work at UI.
+The department was established in 2008 with an initial charge to digitize and make accessible the library's renowned International Jazz Collections. Material from the Jazz Collections continue to be added to this day, and we continue to build on our collections. We currently maintain over 70 digital collections and applications, and work that begun in the lab has now been incorporated into a library department, Data and Digital Services, and a University center, the Center for Digital Inquiry and Learning (CDIL). CDIL is a collaboration between the library and the College of Letters, Arts, and Social Sciences (CLASS) that intends to improve the capacity for digital scholarship work at UI.
 
 ## Our People
 
-Olivia Wikle, Digital Initiatives Librarian  
+[Olivia Wikle](mailto:omwikle@uidaho.edu), Digital Initiatives Librarian  
 Phone: 208.885.9086
 
-Kevin Dobbins, Digital Lab Manager  
+[Kevin Dobbins](mailto:kdobbins@uidaho.edu), Digital Lab Manager  
 Phone: 208.885.9444
 
-Corey Oglesby, Digital Projects Manager  
+[Corey Oglesby](mailto:coglesby@uidaho.edu), Digital Projects Manager  
 Phone: 208.885.9444
 
-Devin Becker, Head, Data and Digital Services and Director of CDIL  
+[Devin Becker](dbecker@uidaho.edu), Head, Data and Digital Services and Director of CDIL  
 Phone: 208.885.7040

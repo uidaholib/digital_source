@@ -8,9 +8,9 @@ layout: page
 <h1 class="py-4">Our Policies</h1>
 
 ## Scanning and Preservation Procedures
-Scans are performed and saved as non-compressed Tiffs and stored on two external hard drives, one of which resides in Moscow and one of which resides in Coeur D'Alene. TIFFs are also backed up to the internal hard drive of computers in the Lau Center for Digital Scholarship, room 211.
+Scans are performed and saved as non-compressed Tiffs and stored on two external hard drives, one of which resides in Moscow and one of which resides in Coeur D'Alene. Tiffs are also backed up to the internal hard drive of computers in the Digital Scholarship Lab, room 211.
 
-Variable scanning resolutions are described below. The primary purpose is to have approximately 4000 pixels across the top of the image for images smaller than 8 x 10, and 6000 pixels for images 8 x 10 and greater.
+Variable scanning resolutions are described below.
 
 ### Manuscripts/Documents:
 - 8 X 11 paper - 400 dpi
@@ -25,29 +25,27 @@ Variable scanning resolutions are described below. The primary purpose is to hav
 
 ### 3D objects:
 - All 3D objects are photographed at 400-600 dpi
-- When possible photograph various sides of the object
-- Photograph a close up of significant details on the object that add to its value
+- When possible various sides of the object are photographed
+- Photographs capture significant details on the object that add to its value
 
 ### Feed Scanner:
-- We scan larger documents using our feed scanner
+- Larger documents are scanned using our feed scanner
 - Pages are scanned anywhere from 400 - 600 dpi
 
-<br>
+<h2 class="pt-4">Metadata Guidelines</h2>
 
-## Metadata Guidelines
+Since we are using the CONTENTdm database access management system, Dublin Core Metadata Initiative (DCMI) is the primary source of our metadata standards. Metadata for objects follows the needs of the collection. When ingested into CONTENTdm, those idiosyncratic standards are translated into Simple Dublin Core to enable the harvesting of that metadata into OCLC's WorldCat catalog and other aggregators.
 
-Since we are using the CONTENTdm database access management system, Dublin Core Metadata Initiative (DCMI) is the primary source of our metadata standards. Metadata for objects begins following the needs of the collection. When ingested into CONTENTdm, those idiosyncratic standards are translated into Simple Dublin Core to enable the harvesting of that metadata into OCLC's WorldCat catalog and other aggregators.
-
-## References
+<h2 class="pt-4">References</h2>
 
 The below sources guide our metadata, scanning, and preservation practices:
 
-**Authority sites**
+### Authority Sites:
 - [LCSH](https://authorities.loc.gov/) (Library of Congress Subject Headings)
 - [AAT](http://www.getty.edu/research/tools/vocabularies/index.html) (Getty's Art and Architecture Thesaurus)
 - [LCTGM](http://www.loc.gov/pictures/) (Library of Congress Thesaurus for Graphic Materials)
 - [USGS](https://www.usgs.gov/core-science-systems/ngp/board-on-geographic-names) (U.S. Geological Survey)
 
-**Metadata sites**
+### Metadata Sites:
 - [Dublin Core Metadata Initiative (DCMI)](https://dublincore.org/)
 - [BCRs CDP Digital Imaging Best Practices (2.0)](https://mwdl.org/docs/digital-imaging-bp_2.0.pdf)

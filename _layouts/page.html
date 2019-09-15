@@ -15,11 +15,18 @@ layout: default
           </div>
           <!-- page -->
           <div class="page-block col-md-9 col-xs-12">
-
-              <main role="main" class="py-4 px-md-5">
-                  <!-- page content -->
-                  {{ content }}
-              </main>
+            
+            {% if page.url contains 'about' %}
+            <main role="main" class="py-4 px-md-5 ml-3 mr-5">
+                <!-- page content -->
+                {{ content }}
+            </main>
+            {% else %}
+            <main role="main" class="py-4 px-md-5">
+                <!-- page content -->
+                {{ content }}
+            </main>
+            {% endif %}
 
           </div>
       </div>
