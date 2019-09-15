@@ -290,6 +290,7 @@ padding: 4px; }
     li { border-color: #d5d5d5 !important; }
 }
 
+/*
 #page-nav {
     //width: 250px;
     font-size:18px;
@@ -298,6 +299,14 @@ padding: 4px; }
     }
     li { border-color: #d5d5d5 !important; }
 }
+*/
+
+#sidenav .active {
+    background-color: #fff !important; 
+    border-right: 2px solid;
+    border-right-color: #191919 !important;
+}
+
 .dropdown-toggle::after {
     margin-left: 15px;
 }
