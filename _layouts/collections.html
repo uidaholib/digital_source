@@ -52,7 +52,7 @@ layout: page
                             {%- capture media -%}{{ c.mediatype | strip}}{%- endcapture -%}
                             {%- assign media = media | split: ';' | compact -%}
                             {% for m in media %}{% if m !=" " and m != "" %}
-                            <small><a href="{{ extension | prepend: '/collections/#' | relative_url }}" class="filter btn btn-sm btn-outline-secondary">{{ m | upcase }} <span class="far {% if c.format contains 'image' %}fa-image{% elsif c.format contains 'audio' %}fa-file-audio{% elsif c.format contains 'video' %}fa-file-video{%else%}fa-file{% endif %}"></span></a></small>
+                            <small><a href="{{ m | prepend: '/collections/#' | relative_url }}" class="filter btn btn-sm btn-outline-secondary my-1">{{ m | upcase }} <span class="{% if m contains 'image' %}far fa-image{% elsif m contains 'audio' %}far fa-file-audio{% elsif m contains 'video' %}far fa-file-video{% elsif m contains 'data' %}far fa-file-excel{% elsif m contains 'correspondence' %}far fa-envelope{% elsif m contains 'scores' %}fas fa-music{% elsif m contains 'illustration' %}fas fa-edit{% elsif m contains 'podcast' %}fas fa-podcast{% elsif m contains 'newspaper' %}far fa-newspaper{% elsif m contains 'map' %}fas fa-map-pin{% elsif m contains 'memorabilia' %}fas fa-box-open{%else%}far fa-file{% endif %}"></span></a></small>
                             <span class="hidden-format-for-browse">{{format-for-browse | replace: "application", "application document"}}</span>
                             {% endif %}{% endfor %}
                         </p>
