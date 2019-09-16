@@ -1,21 +1,22 @@
 <!-- Footer -->
-<footer class="bg-dark pt-4 container-fluid">
-  <div class="row border-bottom border-white pb-4">
+<footer class="bg-dark pt-4">
+  <div class="container">
 
-    <div class="col-6 text-left align-self-center">
-      <a href="https://www.lib.uidaho.edu/"><img alt="Digital Initiatives" src="https://www.lib.uidaho.edu/media/digital/library_white.png" class="img-fluid lib-logo-lg ml-5"></a>
+    <div class="row border-bottom border-white pb-4">
+
+      <div class="col-md-6">
+        <a href="https://www.lib.uidaho.edu/"><img alt="Digital Initiatives" src="https://www.lib.uidaho.edu/media/digital/library_white.png" class="img-fluid lib-logo-lg"></a>
+      </div>
+      <div class="col-md-6 d-flex justify-content-end align-self-center">
+        <a href="https://www.lib.uidaho.edu/digital/"><img class="img-fluid d-none d-md-block lib-logo-md" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" alt="Digital Initiatives"></a>
+      </div>
+
     </div>
 
-    <div class="col-6 text-right align-self-center">
-      <h4 class="mb-0" ><a href="https://www.lib.uidaho.edu/digital/"><img class="img-fluid mr-5" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" alt="Digital Initiatives"></a></h4>
-      <!--<p class="text-white text-right mr-4"><small><a class="pride-gold" href="https://www.lib.uidaho.edu/digital/">Home</a> | <a href="https://www.lib.uidaho.edu/digital/about/" class="pride-gold">About</a> | <a href="https://www.lib.uidaho.edu/digital/collections.html" class="pride-gold">Collections</a></small></p>-->
+    <div class="col-md-12 text-center pt-3 pb-1">
+
+      <p class="text-white">Last updated {{ site.time | date: '%Y' }}
+      </p>
     </div>
-
   </div>
-
-  <div class="col-md-12 text-center pt-3 pb-1">
-    <p class="text-white">Last updated {{ site.time | date: '%Y' }} 
-    </p>
-  </div>
-
 </footer>

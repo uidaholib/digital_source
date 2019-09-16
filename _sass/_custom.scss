@@ -69,6 +69,9 @@ a {
     .navbar {
         min-height:100px; 
     }
+    .lib-logo-md {
+        visibility: hidden;
+    }
 }
 
 @include media-query($on-desktop) {
