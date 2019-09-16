@@ -7,8 +7,8 @@
     <nav id="sidenav" class="pt-3">
         <ul class="list-unstyled components" id="accordion">
             <li class="border-bottom border-top py-2 pl-1 pr-4">
-                <a href="#locations" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">Locations</a>
-                <ul class="collapse list-unstyled" id="locations">
+                <a href="#locations" id="locationsOne" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false" aria-controls="locations">Locations</a>
+                <ul class="collapse list-unstyled overflow" id="locations" aria-labelledby="locationsOne" data-parent="#accordion">
                     {% for f in filters %}
                     {% if f.category == 'Locations' %}
                     <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
@@ -19,8 +19,8 @@
                 </ul>
             </li>
             <li class="border-bottom py-2 pl-1 pr-4">
-                <a href="#subjects" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">Subjects</a>
-                <ul class="collapse list-unstyled" id="subjects">
+                <a href="#subjects" id="subjectsOne" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false" aria-controls="subjects">Subjects</a>
+                <ul class="collapse list-unstyled overflow" id="subjects" aria-labelledby="subjectsOne" data-parent="#accordion">
                     {% for f in filters %}
                     {% if f.category == 'Subjects' %}
                     <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
@@ -31,8 +31,8 @@
                 </ul>
             </li>
             <li class="border-bottom py-2 pl-1 pr-4">
-                <a href="#media-types" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">Media Types</a>
-                <ul class="collapse list-unstyled" id="media-types">
+                <a href="#media-types" id="mediaOne" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false" aria-controls="media-types">Media Types</a>
+                <ul class="collapse list-unstyled overflow" id="media-types" aria-labelledby="mediaOne" data-parent="#accordion">
                     {% for f in filters %}
                     {% if f.category == 'Media Types' %}
                     <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
@@ -43,8 +43,8 @@
                 </ul>
             </li>
             <li class="border-bottom py-2 pl-1 pr-4">
-                <a href="#idaho" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">Idaho</a>
-                <ul class="collapse list-unstyled" id="idaho">
+                <a href="#idaho" id="idahoOne" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false" aria-controls="idaho">Idaho</a>
+                <ul class="collapse list-unstyled overflow" id="idaho" aria-labelledby="idahoOne" data-parent="#accordion">
                     {% for f in filters %}
                     {% if f.category == 'Idaho' %}
                     <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
@@ -55,8 +55,8 @@
                 </ul>
             </li>
             <li class="border-bottom py-2 pl-1 pr-4">
-                <a href="#university" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" class="dropdown-toggle">University of Idaho</a>
-                <ul class="collapse list-unstyled" id="university">
+                <a href="#university" id="universityOne" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false" aria-controls="university">University of Idaho</a>
+                <ul class="collapse list-unstyled overflow" id="university" aria-labelledby="universityOne" data-parent="#accordion">
                     {% for f in filters %}
                     {% if f.category == 'University of Idaho' %}
                     <li class="pl-3 mt-1 {% if page.url contains f.title %} active {% endif %}">
