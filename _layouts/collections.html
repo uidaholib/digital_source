@@ -27,13 +27,14 @@ layout: page
             <div class="item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 my-3">
                 <div class="card mb-3 border-secondary">
                     {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
+                    <a href="{{ c.website }}" target="_blank" rel="noopener">
+                        <img class="card-img-top lazyload img-fluid" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
+                    </a>
+                    
                     <div class="card-body text-center search">
-                        <h3 class="card-title mt-2"><a href="{{ c.website }}" class="text-dark">{{ c.colltitle }}</a></h3>
-                        <div class="card-image">
-                            <a href="{{ c.website }}">
-                                <img class="collection-img lazyload mt-1 mb-3 px-4 img-fluid" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
-                            </a>
-                        </div>
+                        <h4 class="card-title"><a href="#{{ c.collapse }}" class="text-dark" title="link to {{ c.colltitle | escape }}" id="collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.collapse }}">{{ c.colltitle }}</a></h4>
+                        
+                        <div class="collapse" id="{{ c.collapse }}" aria-labelledby="collapseOne">
                         <p>
                             {%- capture btns -%}{% for f in fields %}{% if f.display-name-or-btn == 'btn' %}{{ c[f.field] | strip }};{% endif %}{% endfor %}{%- endcapture -%}
                             {%- assign btns = btns | split: ';' | compact -%}
@@ -56,8 +57,11 @@ layout: page
                             <span class="hidden-format-for-browse">{{format-for-browse | replace: "application", "application document"}}</span>
                             {% endif %}{% endfor %}
                         </p>
+                        
                         <hr>
                             <a href="{{ c.website }}" class="btn btn-ponderosa-pine btn-round" title="link to {{ c.colltitle | escape }}" target="_blank" rel="noopener">View Collection</a>
+                    
+                        </div>
                     </div>
                 </div>
             </div>
