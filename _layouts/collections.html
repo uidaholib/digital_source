@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-{%- assign collections = site.data.digital_all_collections -%}
+{%- assign collections = site.data.digital_all_collections | where: "status","visible" -%}
 {%- assign fields = site.data.browse-config -%}
 
 {{ content }}
@@ -12,7 +12,7 @@ layout: page
             <input type="text" class="form-control form-control-lg" id="quickSearch" placeholder="Filter ... ">
             <div class="input-group-append">
                 <button class="btn btn-ponderosa-pine" type="button" title="Search" alt="Search" id="goButton">Search</button>
-                <a class="btn btn-outline-secondary filter" href="#" data-filter="">Reset</a>
+                <a class="btn btn-outline-secondary filter" href="collections.html" data-filter="">Reset</a>
             </div>
         </div>
         <span class="info2 h2"><span id="numberOf">{{ collections | size }}</span> of {{ collections | size }} collections</span>
