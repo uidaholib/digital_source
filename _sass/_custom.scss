@@ -16,7 +16,6 @@ a {
 
 .split-background {
     background: linear-gradient(to right, #e8e8e8 0%, #e8e8e8 50%, #fdfdfd 50%, #fdfdfd 100%);
-    padding-top: 100px;
 }
 
 /* banner */
@@ -276,11 +275,15 @@ padding: 4px; }
 /* sidebar */
 
 #sidebar {
-    position: fixed;
-    height: 475px;
-    width: 100%;
-    overflow-y: scroll;
+    background: $nav-background;
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
     top: 23%;
+}
+
+.overflow {
+    overflow-y: scroll;
+    height: 140px;
 }
 
 #sidenav {
@@ -293,17 +296,6 @@ padding: 4px; }
     li { border-color: #d5d5d5 !important; }
 }
 
-/*
-#page-nav {
-    //width: 250px;
-    font-size:18px;
-    a {
-        font-weight: 300 !important;
-    }
-    li { border-color: #d5d5d5 !important; }
-}
-*/
-
 #sidenav .active {
     background-color: #fff !important; 
     border-right: 2px solid;
@@ -315,6 +307,7 @@ padding: 4px; }
 }
 .page-block { 
     background: $background-color;
+    padding-top: 100px;
 }
 
 /* all Collections nav */
