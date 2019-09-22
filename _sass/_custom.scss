@@ -169,6 +169,16 @@ dt {
     background: #e8e8e8;
 }
 
+.highlight {
+    background-color: rgba(52, 58, 64, 0.8);
+    position: absolute;
+    height: auto;
+    width: 100%;
+    color: #FFF;
+    top: 90px;
+    z-index: 1;
+}
+
 /* footer */
 .collection-footer{
     background-color: $black-color;
