@@ -27,12 +27,10 @@ layout: page
             <div class="item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 my-3">
                 <div class="card mb-3 border-secondary search">
                     {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
-
                     <a href="#{{ c.collapse }}" id="collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.collapse }}">
                         <img class="card-img-top lazyload img-fluid" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
                         <div class="highlight text-center py-2 px-2">{{ c.colltitle }}</div>
                     </a>
-
 
                     <div class="collapse" id="{{ c.collapse }}" aria-labelledby="collapseOne">
                         <div class="card-body text-center search">

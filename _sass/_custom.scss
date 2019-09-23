@@ -66,42 +66,6 @@ a {
     max-height: 40px;
 }
 
-@include media-query($on-palm) {
-    .navbar {
-        min-height:100px; 
-    }
-    .page-block { 
-        padding-top: 30px;
-    }
-    #map {
-        margin-top: 100px !important;
-    }
-}
-
-@include media-query($on-laptop) {
-    .navbar {
-        min-height:100px; 
-    }
-    .lib-logo-md {
-        visibility: hidden;
-    }
-    .page-block { 
-        padding-top: 30px;
-    }
-    #map {
-        margin-top: 100px !important;
-    }
-}
-
-@include media-query($on-desktop) {
-    .navbar {
-        min-height:100px; 
-    }
-    #map {
-        margin-top: 100px !important;
-    }
-}
-
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
     color: rgba(255,255,255,.75);
 }
@@ -123,16 +87,12 @@ a {
     display: none;
 }
 
-
 /* feature cards */
 .square {
-    height: 0;
     width: 100%;
     height: 20vh;
     background-size: cover;
     background-position: center;
-    opacity: 1;
-    transition: 0.3s;
 }
 
 .square .card-body {
@@ -142,11 +102,11 @@ a {
     bottom: 0;
     right: 0;
     top: 0;
-    visibility:hidden;
+    visibility: hidden;
 }
 
 .square:hover .card-body {
-    visibility:visible;
+    visibility: visible;
 }
 
 /* cards */
@@ -161,13 +121,18 @@ a {
 }
 
 .highlight {
-    background-color: rgba(52, 58, 64, 0.8);
+    background-color: rgba(52, 58, 64, .9);
     position: absolute;
     height: auto;
     width: 100%;
     color: #FFF;
-    top: 90px;
+    top: 85px;
     z-index: 1;
+    /*
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    */
 }
 
 /* footer */
@@ -349,3 +314,68 @@ color: #606E8C; }
 #cloud {
 margin: 0px 30px 30px;
 padding: 4px; }
+
+
+@include media-query($on-palm) {
+    .navbar {
+        min-height:100px; 
+    }
+    .page-block { 
+        padding-top: 30px;
+    }
+    #map {
+        margin-top: 100px !important;
+    }
+    .square .card-body {
+        background-color: rgba(52, 58, 64, 0.8);
+        position: absolute;
+        height: auto;
+        width: 100%;
+        color: #FFF;
+        top: 20%;
+        bottom: 20%;
+        z-index: 1;
+        visibility: visible;
+    }
+    .tooltip{
+        display: none;
+    }
+}
+
+@include media-query($on-laptop) {
+    .navbar {
+        min-height:100px; 
+    }
+    .lib-logo-md {
+        visibility: hidden;
+    }
+    .page-block { 
+        padding-top: 30px;
+    }
+    #map {
+        margin-top: 100px !important;
+    }
+    .square .card-body {
+        background-color: rgba(52, 58, 64, 0.8);
+        position: absolute;
+        height: auto;
+        width: 100%;
+        color: #FFF;
+        top: 20%;
+        bottom: 20%;
+        z-index: 1;
+        visibility: visible;
+    }
+    .tooltip{
+        display: none;
+    }
+}
+
+@include media-query($on-desktop) {
+    .navbar {
+        min-height:100px; 
+    }
+    #map {
+        margin-top: 100px !important;
+    }
+}
