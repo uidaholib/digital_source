@@ -4,9 +4,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="d-md-none float-right col-8">
-            <button type="button" class="btn btn p-1  float-right" data-toggle="modal" data-target="#collections">
-                <img class="img-fluid float-right" id="mobile-nav-image" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" title="University of Idaho Library Digital Initiatives" alt="digital initiatives logo"></button>
+        <div class="d-md-none col-8 ml-auto">
+            <a href="{{ '/' | relative_url }}" class="p-1" >
+                <img class="img-fluid" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" title="University of Idaho Library Digital Initiatives" alt="digital initiatives logo">
+            </a>
+            <!--<a id="banner-home" title="Digital Initiatives" class="d-none d-md-block" href="{{ '/' | relative_url }}">
+                <img class="img-fluid float right lib-logo-md" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" alt="Digital Initiatives [logo]"></a>-->
         </div>
 
         <div class="d-flex py-2 align-items-center navbar-brand">

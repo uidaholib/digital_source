@@ -3,32 +3,42 @@ layout: default
 ---
 
 <div class="split-background">
-  <div class="container-fluid">
-      <div class="row">
-          <div class="col-md-3 col-12 px-0">
-              <!-- page nav button -->
-              <button id="mobilePageNav" class="btn btn-secondary d-md-none col-sm-12 px-0 rounded-0" type="button">
-                  Search by: <span class="fas fa-chevron-down"></span>
-              </button>
-              <!-- page nav / sidebar -->
-              {% include sidebar.html %}
-          </div>
-          <!-- page -->
-          <div class="page-block col-md-9 col-xs-12">
-            
-            {% if page.url contains 'about' %}
-            <main role="main" class="py-4 px-md-5 ml-3 mr-5">
-                <!-- page content -->
-                {{ content }}
-            </main>
-            {% else %}
-            <main role="main" class="py-4 px-md-5">
-                <!-- page content -->
-                {{ content }}
-            </main>
-            {% endif %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-6 px-0">
+                <!-- page nav button -->
+                <div class="small-page">
+                    <button id="mobilePageNav" class="btn btn-secondary d-md-none col-sm-12 px-0 rounded-0" type="button">
+                        MENU <span class="fas fa-chevron-down"></span>
+                    </button>
+                </div>
+                <!-- page nav / sidebar -->
+                {% include sidebar.html %}
+            </div>
 
-          </div>
-      </div>
-  </div>
+            <div class="col-6 px-0 d-block d-md-none">
+                <div class="small-page">
+                    <!-- collections modal -->
+                    <button id="mobile-nav-image" class="btn btn-pride-gold d-md-none col-sm-12 px-0 rounded-0" type="button" data-toggle="modal" data-target="#collections">Collections</button>
+                </div>
+            </div>
+
+            <!-- page -->
+            <div class="page-block col-md-9 col-xs-12">
+
+                {% if page.url contains 'about' %}
+                <main role="main" class="py-4 px-md-5 ml-3 mr-5">
+                    <!-- page content -->
+                    {{ content }}
+                </main>
+                {% else %}
+                <main role="main" class="py-4 px-md-5">
+                    <!-- page content -->
+                    {{ content }}
+                </main>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
 </div>
