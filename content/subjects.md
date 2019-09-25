@@ -1,7 +1,7 @@
 ---
 title: Subjects
 section: Visualize
-permalink: visualize/subjects.html
+permalink: /subjects.html
 layout: subjects
 ---
 
