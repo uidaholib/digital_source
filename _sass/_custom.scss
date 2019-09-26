@@ -163,12 +163,15 @@ a {
     position: sticky;
     position: -webkit-sticky; /* Safari */
     top: 23%;
+    overflow-y: scroll;
+    height: 500px;
 }
-
+/*
 .overflow {
     overflow-y: scroll;
     height: 140px;
 }
+*/
 
 #sidenav {
     font-size:18px;
