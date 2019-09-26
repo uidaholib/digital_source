@@ -25,18 +25,19 @@ layout: page
             {% for c in collections %}
             {% if c.status != 'noshow' %}
             <div class="item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 my-3">
-                <div class="card mb-3 border-secondary search">
+                <div class="card mb-3 border-secondary">
                     {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
                     <div class="container px-0" style="position: relative">
-                    <a href="#{{ c.collapse }}" id="collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.collapse }}">
-                        <img class="card-img-top lazyload img-fluid" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
-                        <div class="highlight text-center py-2 px-2">{{ c.colltitle }}</div>
-                    </a>
-                </div>
+                        <a href="#{{ c.collapse }}" id="collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.collapse }}">
+                            <img class="card-img-top lazyload img-fluid" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
+                            <div class="highlight text-center py-2 px-2">{{ c.colltitle }}</div>
+                        </a>
+                    </div>
 
                     <div class="collapse" id="{{ c.collapse }}" aria-labelledby="collapseOne">
                         <div class="card-body text-center search">
                             <p>
+                                <span class="hidden-format-for-browse">{{ c.colltitle }}</span>
                                 {%- capture btns -%}{% for f in fields %}{% if f.display-name-or-btn == 'btn' %}{{ c[f.field] | strip }};{% endif %}{% endfor %}{%- endcapture -%}
                                 {%- assign btns = btns | split: ';' | compact -%}
                                 {% for b in btns %}{% if b !=" " and b != "" %}
