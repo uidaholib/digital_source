@@ -6,11 +6,7 @@
     campusItems.sort(function() { return 0.5 - Math.random() });
     var i;
     for (i=0; i < 3; i++) {
-        card = "<div class='col-md-10 my-3'><div class='card text-center border-secondary'><img class='card-img-top' src=" + campusItems[i].image + " alt='Card image cap'><div class='card-body border-top'><h4 class='card-title'><a href='" + campusItems[i].website + "'>" + campusItems[i].title + "</a></h4><p class='card-text'>" + campusItems[i].description + "</p></div><div class='card-footer'><a href='" + campusItems[i].website + "' class='btn btn-clearwater btn-round'>View Collection</a></div></div></div>";
+        card = "<div class='col-md-4 my-3'><div class='card text-center border-grey-color'><img class='card-img-top' src=" + campusItems[i].image + " alt='Card image cap'><div class='card-body border-top'><h4 class='card-title'><a href='" + campusItems[i].website + "'>" + campusItems[i].title + "</a></h4><p class='card-text'>" + campusItems[i].description + "</p></div><div class='card-footer'><a href='" + campusItems[i].website + "' class='btn btn-clearwater btn-round'>View Collection</a></div></div></div>";
         campusImage.innerHTML += card;
     }
 </script>
-
-<!--<h5 class='card-title text-white text-center py-2'>" + campusItems[i].title + "</h5>-->
-
-<!--card = "<div class='col-md-10 my-3'><div class='card text-center border-secondary'><a href='#" + campusItems[i].collapse + "' id='collapseOne' data-toggle='collapse' aria-expanded='false' aria-controls='" + campusItems[i].collapse + "'><img class='card-img-top' src=" + campusItems[i].image + " alt='Card image cap'><div class='highlight text-center py-2 px-2'>" + campusItems[i].title + "</div></a><div class='collapse' id='" + campusItems[i].collapse +"' aria-labelledby='collapseOne'><div class='card-body border-top'><p class='card-text'>" + campusItems[i].description + "</p></div><div class='card-footer'><a href='" + campusItems[i].website + "' class='btn btn-clearwater btn-round'>View Project</a></div></div></div></div>";-->
