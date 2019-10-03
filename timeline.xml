@@ -1,0 +1,10 @@
+---
+---
+<data date-time-format="iso8601">
+  {% for collection in site.data.digital_all_collections %}
+
+  <event start="{{ collection.datestart }}-01-01 10:20:01Z" end="{{ collection.dateend }}-01-01 10:20:01Z" color="" isDuration="true" title="{{ collection.colltitle | strip }}" link="{{collection.Website}}" image="/digital/images/small/{{collection.path}}.jpg">
+  {{ collection.short_desc }}
+  </event>
+  {% endfor %}
+</data>

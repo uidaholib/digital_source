@@ -3,6 +3,7 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     color: $black-color;
+    overflow-x: hidden;
 }
 a {
     color: $clearwater;
