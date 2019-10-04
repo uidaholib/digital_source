@@ -1,19 +1,13 @@
 {%- assign featured = site.data.digital_all_collections -%}
 
 <script> 
-    var featuredItems = [ {% for f in featured %}{% if f.featured == 'y' %}{ "title": {{ f.colltitle | jsonify }}, "image": "{{ f.image }}", "website": "{{ f.website }}", "description": "{{ f.shortdesc }}" }{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}];
+    var featuredItems = [ {% for f in featured %}{% if f.featured == 'y' %}{ "title": {{ f.colltitle | jsonify }}, "image": "{{ f.image }}", "website": "{{ f.website }}", "description": "{{ f.shortdesc }}", "collapse": "{{ f.collapse }}" }{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}];
     var featuredImage = document.getElementById("featuredInner");
     featuredItems.sort(function() { return 0.5 - Math.random() });
     var i;
     for (i=0; i < 4; i++) {
-        image = "<div class='col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 my-3'><a href='" + featuredItems[i].website + "' data-toggle='tooltip' data-placement='bottom' title='" + featuredItems[i].description + "'><div class='card square' style='background-image: url(" + featuredItems[i].image + ")'><div class='card-body'><h5 class='card-title text-white text-center py-2'>" + featuredItems[i].title + "</h5></div></div></a></div>";
+        image = "<div class='col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 my-3'><div class='card'><div class='container px-0' style='position: relative'><a href='#" + featuredItems[i].collapse + "' id='collapseTwo' data-toggle='collapse' aria-expanded='false' aria-controls='" + featuredItems[i].collapse + "'><img class='square img-fluid' src='" + featuredItems[i].image + "' alt='Image of " + featuredItems[i].title + "'></a></div><div class='collapse' id='" + featuredItems[i].collapse + "' aria-labelledby='collapseTwo'><div class='card-body text-center'><div class='card-title text-center bg-dark'><a class='text-white' href='" + featuredItems[i].website +"'>" + featuredItems[i].title + "</a></div><p class='card-text'><small class='text-muted'>" + featuredItems[i].description + "</small></p><hr><a href='" + featuredItems[i].website + "' class='btn btn-ponderosa-pine btn-round btn-sm' title='link to {{ c.colltitle | escape }}' target='_blank' rel='noopener'>View Collection</a></div></div></div></div>";
+
         featuredImage.innerHTML += image;
     }
-    $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
-});
 </script>
-
-<!--card titles-->
-<!--<h5 class='card-title text-white text-center py-2'>" + featuredItems[i].title + "</h5>-->
-<!--image = "<div class='col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 my-3'><a href='" + featuredItems[i].website + "' data-toggle='tooltip' data-placement='bottom' title='" + featuredItems[i].description + "'><div class='card square' style='background-image: url(" + featuredItems[i].image + ")'><div class='highlight text-center py-2 px-2'>" + featuredItems[i].title + "</div></div></a></div>";-->
