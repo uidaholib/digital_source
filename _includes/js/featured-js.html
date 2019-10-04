@@ -7,7 +7,6 @@
     var i;
     for (i=0; i < 4; i++) {
         image = "<div class='col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 my-3'><div class='card'><div class='container px-0' style='position: relative'><a href='#" + featuredItems[i].collapse + "' id='collapseTwo' data-toggle='collapse' aria-expanded='false' aria-controls='" + featuredItems[i].collapse + "'><img class='square img-fluid' src='" + featuredItems[i].image + "' alt='Image of " + featuredItems[i].title + "'></a></div><div class='collapse' id='" + featuredItems[i].collapse + "' aria-labelledby='collapseTwo'><div class='card-body text-center'><div class='card-title text-center bg-dark'><a class='text-white' href='" + featuredItems[i].website +"'>" + featuredItems[i].title + "</a></div><p class='card-text'><small class='text-muted'>" + featuredItems[i].description + "</small></p><hr><a href='" + featuredItems[i].website + "' class='btn btn-ponderosa-pine btn-round btn-sm' title='link to {{ c.colltitle | escape }}' target='_blank' rel='noopener'>View Collection</a></div></div></div></div>";
-
         featuredImage.innerHTML += image;
     }
 </script>

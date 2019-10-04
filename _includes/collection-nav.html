@@ -1,3 +1,5 @@
+{%- assign filters = site.data.browsebuttons -%}
+
 <nav class="navbar navbar-default navbar-expand-md navbar-dark fixed-top">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#page-nav" aria-controls="page-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,8 +10,6 @@
             <a href="{{ '/' | relative_url }}" class="p-1" >
                 <img class="img-fluid" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" title="University of Idaho Library Digital Initiatives" alt="digital initiatives logo">
             </a>
-            <!--<a id="banner-home" title="Digital Initiatives" class="d-none d-md-block" href="{{ '/' | relative_url }}">
-                <img class="img-fluid float right lib-logo-md" src="https://www.lib.uidaho.edu/media/digital/bannerlogo_allwhite.png" alt="Digital Initiatives [logo]"></a>-->
         </div>
 
         <div class="d-flex py-2 align-items-center navbar-brand">
@@ -25,10 +25,74 @@
             <ul class="navbar-nav ml-auto">
                 {% for nav in site.data.nav-configuration %}
                 <li class="nav-item {% if page.url == nav.stub %}active{% endif %}">
-                    <a class="nav-link " href="{{ nav.stub | relative_url }}">{{ nav.display-text }}</a>
+                    <a class="nav-link" href="{{ nav.stub | relative_url }}">{{ nav.display-text }}</a>
                 </li>
                 {% endfor %}
             </ul>
         </div>
     </div>
 </nav>
+{% if page.url contains "collections" %}
+<nav class="navbar navbar-default navbar-expand-md navbar-dark bg-dark categorynav" id="catnav">
+    <div class="m-auto">
+        <button class="navbar-toggler btn-light" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            Search Categories
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav m-auto">
+            <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locations</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for f in filters %}
+                    {% if f.category == 'Locations' %}
+                    <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+            <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Subjects</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for f in filters %}
+                    {% if f.category == 'Subjects' %}
+                    <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+            <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media Types</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for f in filters %}
+                    {% if f.category == 'Media Types' %}
+                    <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+            <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idaho Places</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for f in filters %}
+                    {% if f.category == 'Idaho' %}
+                    <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+            <li class="nav-item dropdown mx-2">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">University of Idaho</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    {% for f in filters %}
+                    {% if f.category == 'University of Idaho' %}
+                    <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endif %}
