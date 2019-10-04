@@ -1,11 +1,70 @@
 ---
-layout: page
+layout: default
 ---
 {%- assign collections = site.data.digital_all_collections | where: "status","visible" -%}
 {%- assign fields = site.data.browse-config -%}
+{%- assign filters = site.data.browsebuttons -%}
 
-{{ content }}
+<div class="container-fluid px-0 pt-1 pb-3" style="margin-top: 105px">
+    <nav class="navbar navbar-default navbar-expand-md navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locations</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        {% for f in filters %}
+                        {% if f.category == 'Locations' %}
+                        <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </li>
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Subjects</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        {% for f in filters %}
+                        {% if f.category == 'Subjects' %}
+                        <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </li>
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media Types</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        {% for f in filters %}
+                        {% if f.category == 'Media Types' %}
+                        <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </li>
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idaho Places</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        {% for f in filters %}
+                        {% if f.category == 'Idaho' %}
+                        <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </li>
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">University of Idaho</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        {% for f in filters %}
+                        {% if f.category == 'University of Idaho' %}
+                        <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
+<div class="container">
 <div class="row mb-1 justify-content-center py-5">
     <div class="col-md-8 text-center">
         <div class="input-group input-group-lg">
@@ -18,13 +77,15 @@ layout: page
         <span class="info2 h2"><span id="numberOf">{{ collections | size }}</span> of {{ collections | size }} collections</span>
     </div>
 </div>
+</div>
 
+<div class="container">
 <div class="row">
     <div class="col-md-12">
         <div class="row" id="browseItems">
             {% for c in collections %}
             {% if c.status != 'noshow' %}
-            <div class="item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 my-3">
+            <div class="item col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 my-3">
                 <div class="card mb-3 border-secondary">
                     {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
                     <div class="container px-0" style="position: relative">
@@ -72,4 +133,5 @@ layout: page
             {% endfor %}
         </div>
     </div>
+</div>
 </div>
