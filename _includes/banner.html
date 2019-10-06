@@ -1,0 +1,50 @@
+{% assign buttons = site.data.browsebuttons %}
+{% if page.layout == "home-infographic" %}
+<style>
+#home-title-box {
+    padding-top: 12em;
+    padding-bottom: 2em;
+}
+</style>
+
+<script>
+    function search_all() {
+        var query = document.getElementById("search-all").value;
+        window.open("{{ '/collections.html' | relative_url }}#" + encodeURI(query) , "_self" );
+    }
+</script>
+<div id="home-banner" class="jumbotron jumbotron-fluid mt-5 p-0" aria-label="{{ site.data.theme.home-banner-image-title }}">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div id="home-title-box" class="col-md-8 text-center">
+                <form role="search" id="search" onsubmit="search_all(); return false;">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control form-control-lg" id="search-all" placeholder="Find a collection" > 
+                    <div class="input-group-append">
+                        <button class="btn btn-clearwater rounded-right" type="submit" title="Search" alt="Search" id="search-all-button" >Search</button>
+                    </div>
+                    <button type="button" class="btn btn-palouse-green ml-3 px-3" data-backdrop="false" id="mobile-nav-image" data-toggle="modal" data-target="#collections"><span class="lead">Browse</span></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 text-center pb-5">
+                <div class="card mb-5 browse-card">
+                    <div class="card-body">
+                        <h5 class="card-title text-light">Search Suggested Topics:</h5>
+                            {% for b in buttons %}
+                            {% if b.button == 'btn' %}
+                            <a role="button" class="btn btn-light my-2 mx-1" href="{{ b.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ b.title }}</a>
+                            {% endif %}
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="feature-image" class="text-right p-1"></div>
+</div>
+
+{%- endif -%}
