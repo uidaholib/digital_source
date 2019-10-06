@@ -5,10 +5,10 @@
     {% if page.layout == "timeline" %}{% include timeline-head.html %}{% endif %}
   </head>
   <body {% if page.layout == "timeline" %}onload="onLoad();" onresize="onResize();"{% endif %}>
-    {% include collection-nav.html %}
+    {% include nav.html %}
     {% if page.layout == "home-infographic" %}
     <div class="pt-5">
-    {% include collection-banner.html %}
+    {% include banner.html %}
     </div>
     {% endif %}
     <main role="main">
