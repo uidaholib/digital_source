@@ -29,13 +29,13 @@ layout: default
                     <div class="card mb-3 border-secondary">
                         {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
                         <div class="container px-0" style="position: relative">
-                            <a href="#{{ c.collapse }}" id="collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.collapse }}">
+                            <a href="#{{ c.collapse }}" id="collapse-{{ c.collapse }}" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.collapse }}">
                                 <img class="card-img-top lazyload img-fluid" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
                                 <div class="highlight text-center py-2 px-2">{{ c.colltitle }}</div>
                             </a>
                         </div>
 
-                        <div class="collapse" id="{{ c.collapse }}" aria-labelledby="collapseOne">
+                        <div class="collapse" id="{{ c.collapse }}" aria-labelledby="collapse-{{ c.collapse }}">
                             <div class="card-body text-center search">
                                 <p>
                                     <span class="hidden-format-for-browse">{{ c.colltitle }}</span>
