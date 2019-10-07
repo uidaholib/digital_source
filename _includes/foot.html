@@ -2,6 +2,7 @@
 <script src="{{ '/js/jquery-3.4.1.min.js' | prepend: site.digital-assets }}"></script>
 <script src="{{ '/js/bootstrap.bundle.min.js' | prepend: site.digital-assets }}"></script>
 <!-- load other js -->
+{% if layout.lazyload == true or page.lazyload == true%}<script src="{{ '/js/lazysizes.min.js' | prepend: site.digital-assets }}" async></script>{% endif %}
 {% if page.layout == "collections" %}{% include js/browse-js.html %}{% include js/navscroll-js.html %}{% endif %}
 {% if page.layout == "subjects" %}{% include js/subjects-js.html %}{% endif %}
 {% if page.layout == "locations" %}{% include js/locations-js.html %}{% endif %}
