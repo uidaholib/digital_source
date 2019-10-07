@@ -1,12 +1,13 @@
 {%- assign campus = site.data.digital_all_collections | where: "type","CampusCollection" -%}
-
 <script> 
     var campusItems = [ {% for c in campus %}{ "title": {{ c.colltitle | jsonify }}, "image": "{{ c.image }}", "website": "{{ c.website }}", "description": "{{ c.shortdesc }}" }{% unless forloop.last %}, {% endunless %}{% endfor %}];
     var campusImage = document.getElementById("campusInner");
     campusItems.sort(function() { return 0.5 - Math.random() });
     var i;
+    var cards = "";
     for (i=0; i < 3; i++) {
-        card = "<div class='card text-center border-grey-color mx-4'><img class='card-img-top lazyload' data-src=" + campusItems[i].image + " alt='Card image cap'><div class='card-body border-top'><h4 class='card-title'><a href='" + campusItems[i].website + "'>" + campusItems[i].title + "</a></h4><p class='card-text'>" + campusItems[i].description + "</p></div><div class='card-footer'><a href='" + campusItems[i].website + "' class='btn btn-clearwater btn-round'>View Collection</a></div></div>";
-        campusImage.innerHTML += card;
+        var card = "<div class='card text-center border-grey-color mx-4'><img class='card-img-top lazyload' data-src=" + campusItems[i].image + " alt='Card image cap'><div class='card-body border-top'><h4 class='card-title'><a href='" + campusItems[i].website + "'>" + campusItems[i].title + "</a></h4><p class='card-text'>" + campusItems[i].description + "</p></div><div class='card-footer'><a href='" + campusItems[i].website + "' class='btn btn-clearwater btn-round'>View Collection</a></div></div>";
+        cards += card;
     }
+    campusImage.innerHTML = cards;
 </script>
