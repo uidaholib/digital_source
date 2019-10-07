@@ -1,5 +1,6 @@
 ---
 layout: default
+lazyload: true
 ---
 {%- assign collections = site.data.digital_all_collections | where: "status","visible" -%}
 {%- assign fields = site.data.browse-config -%}
@@ -30,7 +31,7 @@ layout: default
                         {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
                         <div class="container px-0" style="position: relative">
                             <a href="#{{ c.collapse }}" id="collapse-{{ c.collapse }}" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.collapse }}">
-                                <img class="card-img-top lazyload img-fluid" src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
+                                <img class="card-img-top img-fluid {% unless forloop.index < 7 %} lazyload{% endunless %}" {% unless forloop.index < 7 %}data-{% endunless %}src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
                                 <div class="highlight text-center py-2 px-2">{{ c.colltitle }}</div>
                             </a>
                         </div>
