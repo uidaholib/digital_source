@@ -15,7 +15,7 @@ But, again, digitizing is not all we do. We also work with departments, schools,
 
 ## Our History
 
-The department was established in 2008 with an initial charge to digitize and make accessible the library's renowned International Jazz Collections. Material from the Jazz Collections continue to be added to this day, and we continue to build on our collections. We currently maintain over 70 digital collections and applications, and work that begun in the lab has now been incorporated into a library department, Data and Digital Services, and a University center, the Center for Digital Inquiry and Learning (CDIL). CDIL is a collaboration between the library and the College of Letters, Arts, and Social Sciences (CLASS) that intends to improve the capacity for digital scholarship work at UI.
+The department was established in 2008 with an initial charge to digitize and make accessible the library's renowned International Jazz Collections. Material from the Jazz Collections continue to be added to this day, and we continue to build on our collections. We currently maintain over 70 digital collections and applications, and work that begun in the lab has now been incorporated into a library department, Data and Digital Services, and a University center, the [Center for Digital Inquiry and Learning (CDIL)](https://cdil.lib.uidaho.edu). CDIL is a collaboration between the library and the College of Letters, Arts, and Social Sciences (CLASS) that intends to improve the capacity for digital scholarship work at UI.
 
 ## Our People
 
