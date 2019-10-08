@@ -1,6 +1,6 @@
 {%- assign featured = site.data.digital_all_collections -%}
 <script> 
-    var featuredItems = [ {% for f in featured %}{% if f.featured == 'y' %}{ "title": {{ f.colltitle | jsonify }}, "image": "{{ f.image }}", "website": "{{ f.website }}", "description": "{{ f.shortdesc }}", "collapse": "{{ f.collapse }}" }{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}];
+    var featuredItems = [ {% for f in featured %}{% if f.featured == 'y' %}{ "title": {{ f.colltitle | jsonify }}, "image": "{{ f.image }}", "website": "{{ f.website }}", "description": "{{ f.shortdesc }}", "collapse": "{{ f.shorttitle | slugify }}" }{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}];
     var featuredImage = document.getElementById("featuredInner");
     featuredItems.sort(function() { return 0.5 - Math.random() });
     var i;
