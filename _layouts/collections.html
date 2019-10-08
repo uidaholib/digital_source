@@ -30,13 +30,13 @@ lazyload: true
                     <div class="card mb-3 border-secondary">
                         {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
                         <div class="container px-0" style="position: relative">
-                            <a href="#{{ c.collapse }}" id="collapse-{{ c.collapse }}" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.collapse }}">
+                            <a href="#{{ c.shorttitle | slugify }}" id="collapse-{{ c.shorttitle | slugify }}" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.shorttitle | slugify }}">
                                 <img class="card-img-top img-fluid {% unless forloop.index < 7 %} lazyload{% endunless %}" {% unless forloop.index < 7 %}data-{% endunless %}src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
                                 <div class="highlight text-center py-2 px-2">{{ c.colltitle }}</div>
                             </a>
                         </div>
 
-                        <div class="collapse" id="{{ c.collapse }}" aria-labelledby="collapse-{{ c.collapse }}">
+                        <div class="collapse" id="{{ c.shorttitle | slugify }}" aria-labelledby="collapse-{{ c.shorttitle | slugify }}">
                             <div class="card-body text-center search">
                                 <p>
                                     <span class="hidden-format-for-browse">{{ c.colltitle }}</span>
