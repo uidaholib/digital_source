@@ -33,17 +33,17 @@
     </div>
 </nav>
 {% if page.url contains "collections" %}
-<nav class="navbar navbar-default navbar-expand-md navbar-dark bg-dark categorynav" id="catnav">
+<nav class="navbar navbar-default navbar-expand-md background-ponderosa-pine categorynav" id="catnav">
     <div class="m-auto">
-        <button class="navbar-toggler btn-clearwater" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            Search Categories
+        <button class="navbar-toggler btn-outline-light" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            Search Categories <span class="fa fa-angle-down"></span>
         </button>
     </div>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav m-auto">
             <li class="nav-item dropdown mx-2">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locations</a>
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locations</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
                     {% if f.category == 'Locations' %}
@@ -53,7 +53,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown mx-2">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Subjects</a>
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Subjects</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
                     {% if f.category == 'Subjects' %}
@@ -63,7 +63,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown mx-2">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media Types</a>
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media Types</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
                     {% if f.category == 'Media Types' %}
@@ -73,7 +73,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown mx-2">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idaho Places</a>
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idaho Places</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
                     {% if f.category == 'Idaho' %}
@@ -83,7 +83,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown mx-2">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">University of Idaho</a>
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">University of Idaho</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
                     {% if f.category == 'University of Idaho' %}
