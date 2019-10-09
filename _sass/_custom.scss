@@ -22,6 +22,7 @@ a {
 .page-block { 
     background: $background-color;
     padding-top: 100px;
+    min-height: 800px;
 }
 
 .small-page {
@@ -89,7 +90,7 @@ a {
 }
 
 .categorynav {
-    margin-top: 105px;
+    margin-top: 110px;
 }
 
 /* cards */
@@ -120,6 +121,10 @@ a {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.titlebg {
+    margin: 0px -20px 10px;
 }
 
 /* browse */
