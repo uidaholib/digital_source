@@ -17,13 +17,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div id="home-title-box" class="col-md-8 text-center">
-                <form role="search" id="search" onsubmit="search_all(); return false;">
+                <form role="search" id="search" class="border-white" onsubmit="search_all(); return false;">
                 <div class="input-group input-group-lg">
                     <input type="text" class="form-control form-control-lg" id="search-all" placeholder="Find a collection" > 
                     <div class="input-group-append">
-                        <button class="btn btn-clearwater rounded-right" type="submit" title="Search" alt="Search" id="search-all-button" >Search</button>
+                        <button class="btn btn-ponderosa-pine rounded-right border border-light" type="submit" title="Search" alt="Search" id="search-all-button" >Search</button>
                     </div>
-                    <button type="button" class="btn btn-palouse-green ml-3 px-3" data-backdrop="false" id="mobile-nav-image" data-toggle="modal" data-target="#collections"><span class="lead">Browse</span></button>
                 </div>
             </div>
         </div>
@@ -35,9 +34,10 @@
                         <h5 class="card-title text-light">Search Suggested Topics:</h5>
                             {% for b in buttons %}
                             {% if b.button == 'btn' %}
-                            <a role="button" class="btn btn-light my-2 mx-1" href="{{ b.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ b.title }}</a>
+                            <a class="btn btn-light my-2 mx-1" href="{{ b.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ b.title }}</a>
                             {% endif %}
                             {% endfor %}
+                        <button type="button" class="btn btn-info mt-4 px-3" data-backdrop="false" id="mobile-nav-image" data-toggle="modal" data-target="#collections">Browse All Collections</button>
                     </div>
                 </div>
             </div>
