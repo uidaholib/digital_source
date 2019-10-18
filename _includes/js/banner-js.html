@@ -1,6 +1,6 @@
 {%- assign banner = site.data.banner_images -%}
 <script> 
-    var bannerItems = [{% for b in banner %}{ "objectid": {{ b.objectid | jsonify }}, "path": "{{ b.path }}", "filename": "{{ b.filename }}", "position": "{{ b.position }}" }{% unless forloop.last %}, {% endunless %}{% endfor %}];
+    var bannerItems = [{% for b in banner %}{% if b.show == "y" %}{ "objectid": {{ b.objectid | jsonify }}, "path": "{{ b.path }}", "filename": "{{ b.filename }}", "position": "{{ b.position }}" }{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}];
 
     function random_item(items){
         return items[Math.floor(Math.random()*items.length)]; 

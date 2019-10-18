@@ -1,5 +1,7 @@
-objectid,path,filename,position
-cccidaho1,cccidaho,HeyburnStatePark_001,center
-expforsav568,expforest,Meadow_Hayfield,top
-footballcovers87,footballcovers,football2,center
-barstock130,barstock,PG8-X172d,center
+objectid,path,filename,position,show
+cccidaho1,cccidaho,HeyburnStatePark_001,center,y
+expforsav568,expforest,Meadow_Hayfield,top,y
+footballcovers87,footballcovers,football2,center,y
+barstock130,barstock,PG8-X172d,center,n
+nwpostcards468,postcards,postcards,center,y
+nwpostcards406,postcards,postcards2,bottom,n
