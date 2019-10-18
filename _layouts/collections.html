@@ -30,16 +30,19 @@ lazyload: true
                     <div class="card mb-3 border-secondary">
                         {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
                         <div class="container px-0" style="position: relative">
-                            <a href="#{{ c.shorttitle | slugify }}" id="collapse-{{ c.shorttitle | slugify }}" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.shorttitle | slugify }}">
-                                <img class="card-img-top img-fluid {% unless forloop.index < 7 %} lazyload{% endunless %}" {% unless forloop.index < 7 %}data-{% endunless %}src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
-                                <div class="highlight text-center py-2 px-2">{{ c.colltitle }}</div>
-                            </a>
+                            <img class="card-img-top img-fluid {% unless forloop.index < 7 %} lazyload{% endunless %}" {% unless forloop.index < 7 %}data-{% endunless %}src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
+                            <div class="highlight text-center py-2 px-2">
+                                <span class="text-white">{{ c.colltitle }}</span>
+                                <br>
+                                <a href="{{ c.website }}" class="btn btn-outline-light btn-round btn-sm my-2 mr-1" title="link to {{ c.colltitle | escape }}" target="_blank" rel="noopener">View Collection</a>
+                                <a href="#{{ c.shorttitle | slugify }}" id="collapse-{{ c.shorttitle | slugify }}" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.shorttitle | slugify }}" class="btn btn-outline-light btn-round btn-sm my-2 ml-1">Details</a>
+                            </div>
                         </div>
 
                         <div class="collapse" id="{{ c.shorttitle | slugify }}" aria-labelledby="collapse-{{ c.shorttitle | slugify }}">
                             <div class="card-body text-center search">
+                                <span class="hidden-format-for-browse">{{ c.colltitle }}</span>
                                 <p>
-                                    <span class="hidden-format-for-browse">{{ c.colltitle }}</span>
                                     {%- capture btns -%}{% for f in fields %}{% if f.display-name-or-btn == 'btn' %}{{ c[f.field] | strip }};{% endif %}{% endfor %}{%- endcapture -%}
                                     {%- assign btns = btns | split: ';' | compact -%}
                                     {% for b in btns %}{% if b !=" " and b != "" %}
@@ -54,8 +57,6 @@ lazyload: true
                                     <span class="hidden-format-for-browse">{{format-for-browse | replace: "application", "application document"}}</span>
                                     {% endif %}{% endfor %}
                                 </p>
-
-
                                 <p class="card-text"><small class="text-muted">
                                         {% for f in fields %}{% if f.display-name-or-btn != 'btn' %}{% if c[f.field] %}
                                         {% if f.display-name-or-btn %}<strong>{{ f.display-name-or-btn }}:</strong> {% endif %}{{ c[f.field] | truncatewords: 20 | replace: '""','"' }}
@@ -63,9 +64,8 @@ lazyload: true
                                         {% endif %}{% endif %}{% endfor %}
                                     </small>
                                 </p>
-                                <hr>
-                                <a href="{{ c.website }}" class="btn btn-ponderosa-pine btn-round" title="link to {{ c.colltitle | escape }}" target="_blank" rel="noopener">View Collection</a>
-
+                                <!--<hr>
+                                <a href="{{ c.website }}" class="btn btn-ponderosa-pine btn-round" title="link to {{ c.colltitle | escape }}" target="_blank" rel="noopener">View Collection</a>-->
                             </div>
                         </div>
                     </div>
