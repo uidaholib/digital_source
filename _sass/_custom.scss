@@ -3,7 +3,6 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     color: $black-color;
-    overflow-x: hidden;
 }
 a {
     color: $clearwater;
@@ -91,6 +90,7 @@ a {
 
 .categorynav {
     margin-top: 110px;
+    border-width: 4px !important;
 }
 
 /* cards */
@@ -306,6 +306,7 @@ padding: 4px; }
     }
     .categorynav {
         margin-top: 100px;
+        border-width: 7px !important;
     }
 }
 
@@ -324,6 +325,7 @@ padding: 4px; }
     }
     .categorynav {
         margin-top: 100px;
+        border-width: 7px !important;
     }
 }
 
@@ -336,5 +338,6 @@ padding: 4px; }
     }
     .categorynav {
         margin-top: 95px;
+        border-width: 7px !important;
     }
 }
