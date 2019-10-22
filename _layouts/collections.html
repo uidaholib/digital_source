@@ -30,7 +30,7 @@ lazyload: true
                     <div class="card mb-3 border-secondary">
                         {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
                         <div class="container px-0" style="position: relative">
-                            <img class="card-img-top img-fluid {% unless forloop.index < 7 %} lazyload{% endunless %}" {% unless forloop.index < 7 %}data-{% endunless %}src="{{ c.image }}" alt="Image of {{ c.colltitle | escape }}">
+                            <img class="card-img-top img-fluid {% unless forloop.index < 7 %} lazyload{% endunless %}" {% unless forloop.index < 7 %}data-{% endunless %}src="{{ 'https://www.lib.uidaho.edu/digital/objects/digital/img/' | append: c.image | append: '.jpg' }}" alt="Image of {{ c.colltitle | escape }}">
                             <div class="highlight text-center py-2 px-2">
                                 <span class="text-white">{{ c.colltitle }}</span>
                                 <br>
