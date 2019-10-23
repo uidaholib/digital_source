@@ -70,7 +70,7 @@
         feature.layer = layer;{% endif %}
         /* create pop up */
         var itemHref = feature.properties.web;
-        var thumbSrc = feature.properties.image;
+        var thumbSrc = '{{ "/media/digital/small/" | prepend: site.liburl | append: "' + feature.properties.image + '" | append: ".jpg" }}';
         var popupTemplate = '<h4><a class="text-dark" href="' + itemHref + '">' +
             feature.properties.title + '</a></h4><div class="text-center"><a class="btn btn-light" href="' + itemHref + 
             '" ><img class="mapthumb img-fluid" src="' + thumbSrc + '" alt="item thumbnail"></a></div><p class="mt-0">';
