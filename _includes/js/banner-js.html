@@ -7,7 +7,7 @@
         }
     var value = random_item(bannerItems);
     
-    document.getElementById('home-banner').style.cssText = 'background-image:url(https://www.lib.uidaho.edu/digital/objects/digital/' + (value.filename) + '.jpg);background-position:' + (value.position) + ';background-size: cover;background-repeat: no-repeat;';
+    document.getElementById('home-banner').style.cssText = 'background-image:url(https://www.lib.uidaho.edu/media/digital/large/' + (value.filename) + '.jpg);background-position:' + (value.position) + ';background-size: cover;background-repeat: no-repeat;';
 
     bannerItems = bannerItems.filter(function(item) { 
         return item !== value

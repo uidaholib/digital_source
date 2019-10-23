@@ -30,7 +30,7 @@ lazyload: true
                     <div class="card mb-3 border-secondary">
                         {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
                         <div class="container px-0" style="position: relative">
-                            <img class="card-img-top img-fluid {% unless forloop.index < 7 %} lazyload{% endunless %}" {% unless forloop.index < 7 %}data-{% endunless %}src="{{ 'https://www.lib.uidaho.edu/digital/objects/digital/img/' | append: c.image | append: '.jpg' }}" alt="Image of {{ c.colltitle | escape }}">
+                            <img class="card-img-top img-fluid {% unless forloop.index < 7 %} lazyload{% endunless %}" {% unless forloop.index < 7 %}data-{% endunless %}src="{{ '/media/digital/small/' | prepend: site.liburl | append: c.image | append: '.jpg' }}" alt="Image of {{ c.colltitle | escape }}">
                             <div class="highlight text-center py-2 px-2">
                                 <span class="text-white">{{ c.colltitle }}</span>
                                 <br>
@@ -53,7 +53,7 @@ lazyload: true
                                     {%- capture media -%}{{ c.mediatype | strip}}{%- endcapture -%}
                                     {%- assign media = media | split: ';' | compact -%}
                                     {% for m in media %}{% if m !=" " and m != "" %}
-                                    <small><a href="{{ m | prepend: '/collections/#' | relative_url }}" class="filter btn btn-sm btn-outline-secondary my-1">{{ m | upcase }} <span class="{% if m contains 'image' %}far fa-image{% elsif m contains 'audio' %}far fa-file-audio{% elsif m contains 'video' %}far fa-file-video{% elsif m contains 'data' %}far fa-file-excel{% elsif m contains 'correspondence' %}far fa-envelope{% elsif m contains 'scores' %}fas fa-music{% elsif m contains 'illustration' %}fas fa-edit{% elsif m contains 'podcast' %}fas fa-podcast{% elsif m contains 'newspaper' %}far fa-newspaper{% elsif m contains 'map' %}fas fa-map-pin{% elsif m contains 'memorabilia' %}fas fa-box-open{%else%}far fa-file{% endif %}"></span></a></small>
+                                    <small><a href="{{ m | prepend: '/collections.html#' | relative_url }}" class="filter btn btn-sm btn-outline-secondary my-1">{{ m | upcase }} <span class="{% if m contains 'image' %}far fa-image{% elsif m contains 'audio' %}far fa-file-audio{% elsif m contains 'video' %}far fa-file-video{% elsif m contains 'data' %}far fa-file-excel{% elsif m contains 'correspondence' %}far fa-envelope{% elsif m contains 'scores' %}fas fa-music{% elsif m contains 'illustration' %}fas fa-edit{% elsif m contains 'podcast' %}fas fa-podcast{% elsif m contains 'newspaper' %}far fa-newspaper{% elsif m contains 'map' %}fas fa-map-pin{% elsif m contains 'memorabilia' %}fas fa-box-open{%else%}far fa-file{% endif %}"></span></a></small>
                                     <span class="hidden-format-for-browse">{{format-for-browse | replace: "application", "application document"}}</span>
                                     {% endif %}{% endfor %}
                                 </p>

@@ -14,6 +14,9 @@ description: University of Idaho Digital Collections
 # url to the shared assets folder on Digital
 digital-assets: https://www.lib.uidaho.edu/assets
 
+# main url, used to point at server even when on dev server
+liburl: https://www.lib.uidaho.edu
+
 # page gen settings https://github.com/avillafiorita/jekyll-datapage_gen
 
 # page_gen:
