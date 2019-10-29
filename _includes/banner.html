@@ -8,8 +8,8 @@
 </style>
 
 <script>
-    function search_all() {
-        var query = document.getElementById("search-all").value;
+    function search_collections() {
+        var query = document.getElementById("search-collections").value;
         window.open("{{ '/collections.html' | relative_url }}#" + encodeURI(query) , "_self" );
     }
 </script>
@@ -17,13 +17,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div id="home-title-box" class="col-md-8 text-center">
-                <form role="search" id="search" class="border-white" onsubmit="search_all(); return false;">
-                <div class="input-group input-group-lg">
-                    <input type="text" class="form-control form-control-lg" id="search-all" placeholder="Find a collection" > 
-                    <div class="input-group-append">
-                        <button class="btn btn-ponderosa-pine rounded-right border border-light" type="submit" title="Search" alt="Search" id="search-all-button" >Search</button>
+                <form role="search" id="collection-search" class="border-white" onsubmit="search_collections(); return false;">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control form-control-lg" id="search-collections" placeholder="Find a collection" > 
+                        <div class="input-group-append">
+                            <button class="btn btn-ponderosa-pine rounded-right border border-light" type="submit" title="Search" alt="Search" id="search-collections-button" >Search</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
         
