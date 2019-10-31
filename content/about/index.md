@@ -25,8 +25,8 @@ Phone: 208.885.9086
 [Kevin Dobbins](mailto:kdobbins@uidaho.edu), Digital Lab Manager  
 Phone: 208.885.9444
 
-[Corey Oglesby](mailto:coglesby@uidaho.edu), Digital Projects Manager  
-Phone: 208.885.9444
+[Evan Williamson](mailto:ewilliamson@uidaho.edu), Digital Infrastructure Librarian  
+Phone: 208.885.6260
 
 [Devin Becker](dbecker@uidaho.edu), Head, Data and Digital Services and Director of CDIL  
 Phone: 208.885.7040
