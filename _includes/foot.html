@@ -5,12 +5,12 @@
 {% if layout.lazyload == true or page.lazyload == true%}<script src="{{ '/js/lazysizes.min.js' | prepend: site.digital-assets }}" async></script>{% endif %}
 {% if page.layout == "collections" %}{% include js/browse-js.html %}{% include js/navscroll-js.html %}{% endif %}
 {% if page.layout == "subjects" %}{% include js/subjects-js.html %}{% endif %}
-{% if page.layout == "locations" %}{% include js/locations-js.html %}{% endif %}
-{% if page.layout == "about" %}{% include js/sidebar-js.html %}{% endif %}
+{% if page.layout == "page" %}{% include js/sidebar-js.html %}{% endif %}
 {% if page.layout == "map" %}{% include js/map-js.html %}{% endif %}
-{% if layout.gallery == true %}{% include js/gallery-js.html %}{% endif %}
 {% if page.layout == "home-infographic" %}{% include js/featured-js.html %}{% include js/campus-js.html %}{% include js/banner-js.html %}{% endif %}
 <script defer src="{{ '/fontawesome/js/all.min.js' | prepend: site.digital-assets }}"></script>
+
+<!--Add "scrolled" class to nav element-->
 <script>
 $(window).scroll(function(){
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
