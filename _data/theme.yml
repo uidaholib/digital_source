@@ -3,21 +3,17 @@
 # Site settings
 title: Digital Collections, University of Idaho
 
-# header and head metadata
+# Header and head metadata
 description: Official site for University of Idaho Library's Digital Collections
-keywords: digital collections, University of Idaho # describing the whole collection -- add to the two provided
-author: owikle # You! Add your github username 
+keywords: digital collections, University of Idaho
+author: owikle
 
 # Home page
 home-title-y-padding: 12em # the margin from the top your title portion will appear
-mediatypes: images; #options[documents,images,video,sound,data] separate semi-colon(';'). If semi-colon is present, the browse items on the browse page will display a type field. If only one media type (and thus no semi-colon), no type field will display
+mediatypes: images; # If semi-colon is present, the browse items on the collections page will display a type field. If only one media type (and thus no semi-colon), no type field will display
 
-# Browse page
+# Collections page
 # see _data/browse-config.csv for field display options
-# fields given the "btn" option can be multivalued with ";" such as subjects.
-
-# Item page 
-browse-buttons: false # true / false, adds previous/next arrows to items, but doubles build time
 
 # Map page
 # see _data/map-config.csv for field display options
@@ -34,26 +30,8 @@ subjects-off: false # true / false, turns off subject generation to lower dev bu
 subject-min: 1 # min size for subject cloud, too many terms = slow load time!
 stopwords: # set of subjects separated by ;, e.g. boxers;boxing
 
-# Locations page
-locations-on: false
-
 # About page
 about-off: false # true / false, if true will not show link to about page on front. Need to erase link in nav-configuration as well. 
 
-# images 
-image-percentage-large: # default 70
-image-percentage-medium: # default 40 
-image-percentage-small: # default 20
-
-# Theme Options
-# navbar text color
-# Choose from "navbar-light" for use with light background colors, or "navbar-dark" for dark background colors
-navbar-color:
-# navbar background color
-# Choose from bg-primary, bg-secondary, bg-success, bg-danger, bg-warning, bg-info, bg-light, bg-dark, bg-white
-navbar-background:
-# theme with Bootswatch (https://github.com/thomaspark/bootswatch)
-# Choose from: cerulean; cosmo; cyborg; darkly; flatly; journal; litera; lumen; lux; materia; minty; pulse; sandstone; simplex; sketchy; slate; solar; spacelab; superhero; united; yeti 
-bootswatch: # leave blank or comment out for plain bootstrap
 
 gh-repository: https://github.com/uidaholib/collectionbuilder-cdm-template

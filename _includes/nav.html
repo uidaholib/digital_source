@@ -1,6 +1,6 @@
 {%- assign filters = site.data.browsebuttons -%}
 
-<nav class="navbar navbar-default navbar-expand-md navbar-dark fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#page-nav" aria-controls="page-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="page-nav">
             
             <ul class="navbar-nav ml-auto">
-                {% for nav in site.data.nav-configuration %}
+                {%- for nav in site.data.nav-configuration -%}
                 <li class="nav-item {% if page.url == nav.stub %}active{% endif %}">
                     <a class="nav-link" href="{{ nav.stub | relative_url }}">{{ nav.display-text }}</a>
                 </li>
@@ -33,7 +33,7 @@
     </div>
 </nav>
 {% if page.url contains "collections" %}
-<nav class="navbar navbar-default navbar-expand-md background-ponderosa-pine categorynav border-top border-light" id="catnav">
+<nav class="navbar navbar-expand-md background-ponderosa-pine categorynav border-top border-light" id="catnav">
     <div class="m-auto">
         <button class="navbar-toggler btn-outline-light" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             Search Categories <span class="fa fa-angle-down"></span>
@@ -46,50 +46,50 @@
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Locations</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
-                    {% if f.category == 'Locations' %}
+                    {%- if f.category == 'Locations' -%}
                     <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
                     {% endif %}
-                    {% endfor %}
+                    {%- endfor -%}
                 </div>
             </li>
             <li class="nav-item dropdown mx-2">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Subjects</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
-                    {% if f.category == 'Subjects' %}
+                    {%- if f.category == 'Subjects' -%}
                     <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
                     {% endif %}
-                    {% endfor %}
+                    {%- endfor -%}
                 </div>
             </li>
             <li class="nav-item dropdown mx-2">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media Types</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
-                    {% if f.category == 'Media Types' %}
+                    {%- if f.category == 'Media Types' -%}
                     <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
                     {% endif %}
-                    {% endfor %}
+                    {%- endfor -%}
                 </div>
             </li>
             <li class="nav-item dropdown mx-2">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Idaho Places</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
-                    {% if f.category == 'Idaho' %}
+                    {%- if f.category == 'Idaho' -%}
                     <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
                     {% endif %}
-                    {% endfor %}
+                    {%- endfor -%}
                 </div>
             </li>
             <li class="nav-item dropdown mx-2">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">University of Idaho</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for f in filters %}
-                    {% if f.category == 'University of Idaho' %}
+                    {%- if f.category == 'University of Idaho' -%}
                     <a class="dropdown-item" href="{{ f.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ f.title}}</a>
                     {% endif %}
-                    {% endfor %}
+                    {%- endfor -%}
                 </div>
             </li>
         </ul>

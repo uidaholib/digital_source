@@ -25,7 +25,7 @@ lazyload: true
         <div class="col-md-12">
             <div class="row" id="browseItems">
                 {% for c in collections %}
-                {% if c.status != 'noshow' %}
+                {%- if c.status != 'noshow' -%}
                 <div class="item col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 my-3">
                     <div class="card mb-3 border-secondary">
                         {%- assign format-for-browse = c.mediatype | strip | split: ';' | downcase -%}
@@ -47,7 +47,7 @@ lazyload: true
                                     {%- assign btns = btns | split: ';' | compact -%}
                                     {% for b in btns %}{% if b !=" " and b != "" %}
                                     <a class="btn btn-sm btn-secondary my-1 filter text-wrap" href="{{ b | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ b }}</a>
-                                    {% endif %}{% endfor %}
+                                    {% endif %}{%- endfor -%}
                                 </p>
                                 <p class="card-text">
                                     {%- capture media -%}{{ c.mediatype | strip}}{%- endcapture -%}
@@ -55,17 +55,15 @@ lazyload: true
                                     {% for m in media %}{% if m !=" " and m != "" %}
                                     <small><a href="{{ m | prepend: '/collections.html#' | relative_url }}" class="filter btn btn-sm btn-outline-secondary my-1">{{ m | upcase }} <span class="{% if m contains 'image' %}far fa-image{% elsif m contains 'audio' %}far fa-file-audio{% elsif m contains 'video' %}far fa-file-video{% elsif m contains 'data' %}far fa-file-excel{% elsif m contains 'correspondence' %}far fa-envelope{% elsif m contains 'scores' %}fas fa-music{% elsif m contains 'illustration' %}fas fa-edit{% elsif m contains 'podcast' %}fas fa-podcast{% elsif m contains 'newspaper' %}far fa-newspaper{% elsif m contains 'map' %}fas fa-map-pin{% elsif m contains 'memorabilia' %}fas fa-box-open{%else%}far fa-file{% endif %}"></span></a></small>
                                     <span class="hidden-format-for-browse">{{format-for-browse | replace: "application", "application document"}}</span>
-                                    {% endif %}{% endfor %}
+                                    {% endif %}{%- endfor -%}
                                 </p>
                                 <p class="card-text"><small class="text-muted">
                                         {% for f in fields %}{% if f.display-name-or-btn != 'btn' %}{% if c[f.field] %}
                                         {% if f.display-name-or-btn %}<strong>{{ f.display-name-or-btn }}:</strong> {% endif %}{{ c[f.field] | truncatewords: 20 | replace: '""','"' }}
                                         {% unless forloop.last %}<br>{% endunless %}
-                                        {% endif %}{% endif %}{% endfor %}
+                                        {% endif %}{% endif %}{%- endfor -%}
                                     </small>
                                 </p>
-                                <!--<hr>
-                                <a href="{{ c.website }}" class="btn btn-ponderosa-pine btn-round" title="link to {{ c.colltitle | escape }}" target="_blank" rel="noopener">View Collection</a>-->
                             </div>
                         </div>
                     </div>

@@ -4,10 +4,9 @@
 # JEKYLL_ENV=production jekyll build
 
 # url variables
-# library's domain (only changed if using github pages)
+# library's domain
 url: https://www.lib.uidaho.edu
-# location on the website, normally in /digital
-# e.g. /digital/hjccc
+# location on the website
 baseurl: /digital
 description: University of Idaho Digital Collections
 
@@ -17,14 +16,6 @@ digital-assets: https://www.lib.uidaho.edu/assets
 # main url, used to point at server even when on dev server
 liburl: https://www.lib.uidaho.edu
 
-# page gen settings https://github.com/avillafiorita/jekyll-datapage_gen
-
-# page_gen:
-#  - data: 'boxing'
-#    template: 'items'
-#    name: 'object-id'
-#    dir: 'items'
-#    extension: 'html'   
 
 # add liquid profiler to id bottlenecks
 # profile: true
