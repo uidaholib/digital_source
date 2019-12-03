@@ -1,5 +1,5 @@
-{% assign buttons = site.data.browsebuttons %}
-{% if page.layout == "home-infographic" %}
+{%- assign buttons = site.data.browsebuttons -%}
+{%- if page.layout == "home-infographic" -%}
 <style>
 #home-title-box {
     padding-top: 12em;
@@ -34,13 +34,13 @@
                     <div class="card-body">
                         <h5 class="card-title text-light">Search Suggested Topics:</h5>
                             {% for b in buttons %}
-                            {% if b.button == 'btn' %}
+                            {%- if b.button == 'btn' -%}
                             <a class="btn btn-light my-2 mx-1" href="{{ b.title | strip | url_param_escape | prepend: '/collections.html#' | relative_url }}">{{ b.title }}</a>
                             {% endif %}
-                            {% endfor %}
+                            {%- endfor -%}
                             <br>
-                        <button type="button" class="btn btn-info mt-4 px-3" data-backdrop="false" id="mobile-nav-image" data-toggle="modal" data-target="#collections">Browse All Collections</button>
-                        <button type="button" class="btn btn-pride-gold mt-4 ml-4 px-3" data-backdrop="false" id="search-collections-modal-button" data-toggle="modal" data-target="#search-coll-mod">Search Across All Collections</button>
+                        <button type="button" class="btn btn-info mt-4 mx-2 px-3" data-backdrop="false" id="mobile-nav-image" data-toggle="modal" data-target="#collections">Browse All Collections</button>
+                        <button type="button" class="btn btn-pride-gold mt-4 mx-2 px-3" data-backdrop="false" id="search-collections-modal-button" data-toggle="modal" data-target="#search-coll-mod">Search Across All Collections</button>
                     </div>
                 </div>
             </div>

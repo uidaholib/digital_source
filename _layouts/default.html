@@ -2,8 +2,9 @@
 <html lang="en">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
     {% include head.html %}
-    {% if page.layout == "timeline" %}{% include timeline-head.html %}{% endif %}
+    {% if page.layout == "timeline" %}{% include timeline-head.html %}{%- endif -%}
   </head>
+  
   <body {% if page.layout == "timeline" %}onload="onLoad();" onresize="onResize();"{% endif %}>
     {% include nav.html %}
     {% if page.layout == "home-infographic" %}
