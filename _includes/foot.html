@@ -8,6 +8,7 @@
 {% if page.layout == "subjects" %}{% include js/subjects-js.html %}{% endif %}
 {% if page.layout == "page" %}{% include js/sidebar-js.html %}{% endif %}
 {% if page.layout == "map" %}{% include js/map-js.html %}{% endif %}
+{% if page.layout == "table" or page.layout == "data" %}{% include js/table-js.html %}{% endif %}
 {% if page.layout == "home-infographic" %}{% include js/featured-js.html %}{% include js/campus-js.html %}{% include js/banner-js.html %}{% endif %}
 <script defer src="{{ '/fontawesome/js/all.min.js' | prepend: site.digital-assets }}"></script>
 
