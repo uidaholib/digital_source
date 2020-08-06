@@ -43,15 +43,15 @@ lazyload: true
                             <div class="card-body text-center search">
                                 <span class="hidden-format-for-browse">{{ c.colltitle }}</span>
                                 <div class="list-group">
-                                    <a href="{{ '/data/metadata.csv' | prepend: c.website | relative_url }}" class="list-group-item">Metadata CSV</a>
-                                    <a href="{{ '/data/metadata.json' | prepend: c.website | relative_url }}" class="list-group-item">Metadata JSON</a>
-                                    <a href="{{ '/data/geodata.json' | prepend: c.website | relative_url }}" class="list-group-item">Geodata JSON</a>
-                                    <a href="{{ '/data/subjects.json' | prepend: c.website | relative_url }}" class="list-group-item">Subjects JSON</a>
-                                    <a href="{{ '/data/subjects.csv' | prepend: c.website | relative_url }}" class="list-group-item">Subjects CSV</a>
-                                    <a href="{{ '/data/locations.json' | prepend: c.website | relative_url }}" class="list-group-item">Locations JSON</a>
-                                    <a href="{{ '/data/locations.csv' | prepend: c.website | relative_url }}" class="list-group-item">Locations CSV</a>
-                                    <a href="{{ '/data/timelinejs.json' | prepend: c.website | relative_url }}" class="list-group-item">TimelineJS JSon</a>
-                                    <a href="{{ '/data/facets.json' | prepend: c.website | relative_url }}" class="list-group-item">Facets JSon</a>
+                                    <a href="{{ '/data/metadata.csv' | prepend: c.website | relative_url }}" class="list-group-item list-group-item-action">Metadata CSV</a>
+                                    <a href="{{ '/data/metadata.json' | prepend: c.website | relative_url }}" class="list-group-item list-group-item-action">Metadata JSON</a>
+                                    <a href="{{ '/data/geodata.json' | prepend: c.website | relative_url }}" class="list-group-item list-group-item-action">Geodata JSON</a>
+                                    <a href="{{ '/data/subjects.json' | prepend: c.website | relative_url }}" class="list-group-item list-group-item-action">Subjects JSON</a>
+                                    <a href="{{ '/data/subjects.csv' | prepend: c.website | relative_url }}" class="list-group-item list-group-item-action">Subjects CSV</a>
+                                    <a href="{{ '/data/locations.json' | prepend: c.website | relative_url }}" class="list-group-item list-group-item-action">Locations JSON</a>
+                                    <a href="{{ '/data/locations.csv' | prepend: c.website | relative_url }}" class="list-group-item list-group-item-action">Locations CSV</a>
+                                    <a href="{{ '/data/timelinejs.json' | prepend: c.website | relative_url }}" class="list-group-item list-group-item-action">TimelineJS JSon</a>
+                                    <a href="{{ '/data/facets.json' | prepend: c.website | relative_url }}" class="list-group-item list-group-item-action">Facets JSon</a>
                                 </div>
                                 <p >
                                     {%- capture btns -%}{% for f in fields %}{% if f.display-name-or-btn == 'btn' %}{{ c[f.field] | strip }};{% endif %}{% endfor %}{%- endcapture -%}

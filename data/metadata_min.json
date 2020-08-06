@@ -1,9 +1,10 @@
 ---
 # metadata for table ajax
 ---
-{%- assign items = site.data[site.data.theme.metadata] -%}
-{%- assign fields = site.data.table-config | map: 'field' -%}
+
+{%- assign items = site.data.digitaldata | where_exp: 'item','item.website contains "www.lib.uidaho.edu/digital/"' -%}
+{%- assign fields = site.data.config-table | map: 'field' -%}
 { "objects": [
-{%- for item in items -%}[ {% for f in fields %}{% if item[f] %}{{ item[f] | jsonify }}{% else %}"n/a"{% endif %},{% endfor %} {{ "/items/" | append: item.object-id | append: ".html" | relative_url | jsonify }} ]{% unless forloop.last %},{% endunless %}
+{%- for item in items -%}{% unless item.type == 'CampusCollection' %}[ {% for f in fields %}{% if f == 'data' %}"<a href='{{ item.website}}/data/metadata.csv' class='btn btn-sm btn-primary m-2'>Metadata CSV</a><a href='{{ item.website}}/data/metadata.json' class='btn btn-sm btn-primary m-2'>Metadata JSON</a><a href='{{ item.website}}/data/geodata.json' class='btn btn-sm btn-success m-2'>Geodata JSON</a><br/><a href='{{ item.website}}/data/subjects.json' class='btn btn-sm btn-secondary m-2'>Subjects JSON</a><a href='{{ item.website}}/data/subjects.csv' class='btn btn-sm btn-secondary m-2'>Subjects CSV</a><a href='{{ item.website}}/data/locations.json' class='btn btn-sm btn-secondary m-2'>Locations JSON</a><a href='{{ item.website}}/data/locations.csv' class='btn btn-sm btn-secondary m-2'>Locations CSV</a><a href='{{ item.website}}/data/timelinejs.json' class='btn btn-sm btn-warning m-2'>TimelineJS JSon</a><a href='{{ item.website}}/data/facets.json' class='btn btn-sm btn-info m-2'>Facets JSon</a>"{% elsif f == 'text' %}"<pre style='font-size:8px;'>{{ item.website | remove: 'index.html' }}data/metadata.csv<br/>{{ item.website | remove: 'index.html' }}data/metadata.json<br/>{{ item.website | remove: 'index.html' }}data/geodata.json<br/>{{ item.website | remove: 'index.html' }}data/subjects.json<br/>{{ item.website | remove: 'index.html' }}data/subjects.csv<br/>{{ item.website | remove: 'index.html' }}data/locations.json<br/>{{ item.website | remove: 'index.html' }}data/locations.json<br/>{{ item.website | remove: 'index.html' }}data/timelinejs.json<br/>{{ item.website | remove: 'index.html' }}data/facets.json</pre>"{% elsif item[f] %}{{ item[f] | jsonify }}{% else %}"n/a"{% endif %},{% endfor %} {{ item.website | jsonify }} ]{% unless forloop.last %},{% endunless %}{%endunless%}
 {% endfor %}
 ] }
