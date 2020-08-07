@@ -6,6 +6,7 @@
 
 {% if site.data.theme.bstheme %}<link rel="stylesheet" href="{{ '/css/' | append: site.data.theme.bstheme | append: '/bootstrap.min.css' | prepend: site.digital-assets }}" type="text/css">
 {% else %}<link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | prepend: site.digital-assets }}" type="text/css">{% endif %}
+{% if page.layout == 'data' %}<link rel="stylesheet" type="text/css" href="{{ '/assets/lib/datatables/datatables.min.css' | absolute_url }}">{%- endif -%}
 {% if page.layout == 'map' %}<link rel="stylesheet" href="{{ '/leaflet/leaflet.css' | prepend: site.digital-assets }}">
 {% if site.data.theme.map-search == true %}<link rel="stylesheet" href="{{ '/leaflet/leaflet.fusesearch.css' | prepend: site.digital-assets }}">{% endif %}
 {% if site.data.theme.map-cluster == true %}<link rel="stylesheet" href="{{ '/leaflet/MarkerCluster.css' | prepend: site.digital-assets }}">
