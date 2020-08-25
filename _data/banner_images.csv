@@ -1,7 +1,8 @@
 objectid,path,filename,position,show
-cccidaho1,cccidaho,HeyburnStatePark_001,center,y
-expforsav568,expforest,Meadow_Hayfield,top,y
+cccidaho1,cccidaho,HeyburnStatePark_001,center,n
+expforsav568,expforest,Meadow_Hayfield,top,n
 footballcovers87,footballcovers,football2,center,y
 barstock130,barstock,PG8-X172d,center,n
-nwpostcards468,postcards,postcards,center,y
-nwpostcards406,postcards,postcards2,bottom,n
+nwpostcards468,postcards,postcards,center,n
+nwpostcards406,postcards,postcards2,bottom,y
+argonautphotos286,argonautphotos,p17254coll3_286_full,top,y
