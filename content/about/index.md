@@ -28,5 +28,5 @@ Phone: 208.885.9444
 [Evan Williamson](mailto:ewilliamson@uidaho.edu), Digital Infrastructure Librarian  
 Phone: 208.885.6260
 
-[Devin Becker](dbecker@uidaho.edu), Head, Data and Digital Services and Director of CDIL  
+[Devin Becker](mailto:dbecker@uidaho.edu), Head, Data and Digital Services and Director of CDIL  
 Phone: 208.885.7040
