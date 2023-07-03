@@ -1,23 +1,56 @@
-<!-- Footer-->
+<footer class="border-top">
+  <div class="container-fluid py-3">
+      <div class="row pt-3">
 
-<footer class="navbar nav-dark bg-dark mt-0 py-3 b-0">
-<div class="container">
-    <div class="col-md-4 mt-2 pl-4 align-self-center">
-      <a class="h2 text-white" href="{{ '/' | absolute_url }}">Digital Initiatives</a>
-    
-      <p class="text-white text-left"><small><a class="pride-gold" href="https://www.lib.uidaho.edu">University of Idaho Library</a> | <span class="pride-gold">Room 211</span></small>
-      <br>
-      <small><a class="pride-gold" href="mailto:omwikle@uidaho.edu">Email</a> | <span class="pride-gold">208-885-9444</span></small></p>
-        
-      
-    </div>
-    <div class="col-md-4 align-self-center text-center">
+          <div class="col-12">
+              <ul id="footer-links" class="nav text-uppercase pb-3 mr-3 text-right">
+                  <li class="nav-item"><a class="nav-link" href="{{ '/' | relative_url }}">Digital Initiatives</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ '/collections.html' | relative_url }}">Collections</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ '/about/' | relative_url }}">About Digital</a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.lib.uidaho.edu/help/">Help</a></li>
+              </ul>
+          </div>
 
-    </div>
-    <div class="col-md-4 d-flex justify-content-end">
-        <a href="https://www.lib.uidaho.edu/"><img alt="Digital Initiatives" src="https://www.lib.uidaho.edu/media/digital/library_white.png" class="img-fluid lib-logo-lg"></a>
+          <div class="col-12 col-lg-4">
+              <div class="row align-items-center">
+                  <div class="col-4 text-right">
+                      <div class="px-3 py-2 mb-3">
+                          <a title="University of Idaho Library" href="{{ '/' | relative_url }}">
+                              <img id="footer-logo" class="img-fluid" src="{{ '/images/tower_icon_gold.png' | prepend: site.lib-media }}" alt="Gold U of I Library Tower logo" >
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-8">
+                      <p class="border-left border-pride-gold pl-3 mb-3">
+                          Center for Digital Inquiry and Learning, Room 211<br>
+                          University of Idaho Library<br>
+                          <a href="https://www.lib.uidaho.edu/about/directions.html">850 S Rayburn Street<br>
+                          Moscow, ID 83844</a><br>
+                          (208) 885-9444<br>
+                          <a href="{{ '/about/landacknowledgment.html' | relative_url }}"><span class="fas fa-map-marker-alt" aria-hidden="true"></span> On Nimiipuu lands</a>
+                      </p>
+                  </div>
+              </div>
+          </div>
 
-    </div>
+          <div class="col-12 col-lg-8">
+              <div class="text-right mr-5 mt-5 mt-lg-0">
+                  <p>
+                    <small><em>Bringing the world to Idaho ... and Idaho to the world.</em><br>
+                      <a href="https://www.uidaho.edu/privacy" target="_blank" rel="noopener">U of I Privacy Standard</a> | 
+                      <a href="{{ '/about/tech.html#web-accessibility' | relative_url }}" >Web Accessibility</a>
+                      <br>
+                      © {{ site.time | date: "%Y" }} University of Idaho Library
+                    </small><br>
+                    
+                  </p>
+                  <p><a href="https://www.lib.uidaho.edu/" title="U of I Library Home"><img id="footer-library-logo" alt="U of I Library" src="https://www.lib.uidaho.edu/media/digital/library_white.png" class="img-fluid"></a></p>
+                  <p><a href="https://uidaho.co1.qualtrics.com/jfe/form/SV_eqZdsQyel8sKBAG?source_link={{ page.url | absolute_url }}" target="_blank" rel="noopener" class="btn btn-sm btn-outline-clearwater">Website Feedback</a></p>
+              </div>
+          </div>
+
+      </div>
+
   </div>
 </footer>
   

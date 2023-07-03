@@ -339,3 +339,16 @@ padding: 4px; }
         border-width: 7px !important;
     }
 }
+
+/* footer */
+footer, footer a {
+    color:white !important;
+    font-weight: 300;
+    background-color: $black-color;
+}
+#footer-logo {
+    max-height: 120px;
+}
+#footer-library-logo {
+    max-height: 55px;
+}

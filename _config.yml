@@ -15,7 +15,8 @@ source-code: https://github.com/uidaholib/digital_source
 
 # url to the shared assets folder on Digital
 digital-assets: https://www.lib.uidaho.edu/assets
-
+# directory for all centralize library media assets
+lib-media: https://www.lib.uidaho.edu/media
 # main url, used to point at server even when on dev server
 liburl: https://www.lib.uidaho.edu
 
