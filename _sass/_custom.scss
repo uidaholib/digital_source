@@ -70,7 +70,7 @@ a {
 /* Set nav background color and control transition to transparent */
 .navbar { 
   transition:500ms ease;
-  background: #343a40;
+  background-color: $black-color;
 }
 
 /* Set nav background color on scroll */
