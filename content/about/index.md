@@ -19,17 +19,11 @@ The department was established in 2008 with an initial charge to digitize and ma
 
 ## Our People
 
-[Olivia Wikle](mailto:omwikle@uidaho.edu), Digital Initiatives Librarian  
-Phone: 208.885.9086
+[Kevin Dobbins](mailto:kdobbins@uidaho.edu), Digital Lab Manager
 
-[Kevin Dobbins](mailto:kdobbins@uidaho.edu), Digital Lab Manager  
-Phone: 208.885.9444 
+[Klytie Xu](mailto:kxu@uidaho.edu), Digital Projects Manager
 
-[Klytie Xu](mailto:kxu@uidaho.edu), Digital Projects Manager  
-Phone: 208.885.9444
+[Evan Williamson](mailto:ewilliamson@uidaho.edu), Unit Head for Digital Scholarship and Open Strategies
+Digital; Digital Infrastructure Librarian; Co-Director of CDIL
 
-[Evan Williamson](mailto:ewilliamson@uidaho.edu), Digital Infrastructure Librarian  
-Phone: 208.885.6260
-
-[Devin Becker](mailto:dbecker@uidaho.edu), Head, Data and Digital Services and Director of CDIL  
-Phone: 208.885.7040
+[Devin Becker](mailto:dbecker@uidaho.edu), Associate Dean Research and Instruction; Co-Director of CDIL
