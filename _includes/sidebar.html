@@ -5,7 +5,7 @@
     <hr>
     <nav id="sidenav">
         <ul class="list-unstyled components">
-            {%- for sub in page-nav[page.section] -%}
+            {%- for sub in page-nav[page.section] -%}{% unless sub.parent %}
             {% if sub.subpages %}{% assign urls = sub.subpages | map: "url" %}
             <li class="border-bottom py-2 pl-1 pr-4">
                 <a {%if sub.type != "direct-link" %}href="#{{ sub.subsection | slugify }}" data-toggle="collapse" aria-expanded="false" {%else %}href="{{ sub.link | relative_url }}"{%endif%}class="dropdown-toggle" >{{ sub.subsection }}</a>
@@ -21,7 +21,7 @@
             <li class="border-bottom py-2 pl-1 pr-4 {% if sub.link == page.url %} active{% endif %}">
                 <a href="{{ sub.link | relative_url }}">{{ sub.subsection }}</a>
             </li>
-            {%- endif -%}
+            {%- endif -%}{% endunless %}
             {% endfor %}
         </ul>
     </nav>
