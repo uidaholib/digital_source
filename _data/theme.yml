@@ -1,5 +1,9 @@
 # Jekyll Digital Collection Generator
 
+
+featured_item_src: https://www.lib.uidaho.edu/media/digital/small/uihistorical.jpg
+featured_item_alt: "historic black and white photograph of campus administration building"
+
 # Site settings
 title: Digital Collections, University of Idaho
 

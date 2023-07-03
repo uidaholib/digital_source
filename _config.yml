@@ -1,20 +1,49 @@
-# Jekyll Digital Collection Generator
+##########
+# based on collectionbuilder
+# https://github.com/CollectionBuilder
+##########
 
-# Note: use environment variable on build command to include analytics
-# JEKYLL_ENV=production jekyll build
-
-# url variables
-# library's domain
+##########
+# URL VARIABLES
+#
+# site domain, full URL to the production location of your collection
 url: https://www.lib.uidaho.edu
-# location on the website
+# path to location on the domain if necessary e.g. /digital/hjccc
 baseurl: /digital
-description: University of Idaho Digital Collections
+# location of code, the full url to your github repository
+source-code: https://github.com/uidaholib/digital_source
 
 # url to the shared assets folder on Digital
 digital-assets: https://www.lib.uidaho.edu/assets
 
 # main url, used to point at server even when on dev server
 liburl: https://www.lib.uidaho.edu
+
+##########
+# SITE SETTINGS
+#
+# title of site appears in banner
+title: Digital Collections, University of Idaho
+# tagline, a short phrase that will appear throughout the site in the top banner
+tagline: 
+# description appears in meta tags and other locations
+# this description might appear in search result lists, keep around 160 characters max
+description: "University of Idaho Library Digital Collections provide access to unique materials to enhance and support research and education."
+# keywords, a short list of subjects describing the collection, separated by semicolon, to appear in rich markup
+keywords: University of Idaho, digital collections, history, archival research
+# creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
+author: uidaholib
+
+##########
+# Site/Organization Branding 
+#   Enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo
+#   To remove the branding, comment out these values, or delete them. 
+#
+organization-name: "University of Idaho Library Digital Initiatives"
+organization-link: https://lib.uidaho.edu/digital/
+organization-logo-banner: https://www.lib.uidaho.edu/media/images/ui_library_horizontal.png
+organization-logo-nav: https://www.lib.uidaho.edu/media/digital/library_white.png
+
 
 
 # add liquid profiler to id bottlenecks

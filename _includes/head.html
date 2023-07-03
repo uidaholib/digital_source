@@ -1,8 +1,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>{{ site.data.theme.title | escape }} | {{ page.title | escape }}</title>
+<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+<!--
+   __  __   ________  ___    __  ______     __    ________ 
+  / / / /  /  _/ __ \/   |  / / / / __ \   / /   /  _/ __ )
+ / / / /   / // / / / /| | / /_/ / / / /  / /    / // __  |
+/ /_/ /  _/ // /_/ / ___ |/ __  / /_/ /  / /____/ // /_/ / 
+\____/  /___/_____/_/  |_/_/ /_/\____/  /_____/___/_____/  
+                                                           
+https://github.com/uidaholib
+
+-->
+<meta name="generator" content="collectionbuilder-csv" />
 <meta http-equiv="Content-Language" content="en-us" >
-{% if page.layout == "item" %}{% include item-meta.html %}{% else %}{% include page-meta.html %}{% endif %}
+{% include page-meta.html %}
 
 {% if site.data.theme.font-cdn %}{{ site.data.theme.font-cdn }}
 {% elsif jekyll.environment == "production" %}
@@ -10,8 +21,7 @@
 {% else %}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 {% endif %}
-{% if site.data.theme.bstheme %}<link rel="stylesheet" href="{{ '/css/' | append: site.data.theme.bstheme | append: '/bootstrap.min.css' | prepend: site.digital-assets }}" type="text/css">
-{% else %}<link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | prepend: site.digital-assets }}" type="text/css">{% endif %}
+<link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | prepend: site.digital-assets }}" type="text/css">
 {% if page.layout == 'data' %}<link rel="stylesheet" type="text/css" href="{{ '/assets/lib/datatables/datatables.min.css' | absolute_url }}">{%- endif -%}
 {% if page.layout == 'map' %}<link rel="stylesheet" href="{{ '/leaflet/leaflet.css' | prepend: site.digital-assets }}">
 {% if site.data.theme.map-search == true %}<link rel="stylesheet" href="{{ '/leaflet/leaflet.fusesearch.css' | prepend: site.digital-assets }}">{% endif %}
