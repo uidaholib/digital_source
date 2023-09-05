@@ -6,7 +6,10 @@ lazyload: true
 {%- assign fields = site.data.browse-config -%}
 
 <div class="container pt-4">
-    <div class="row mb-1 justify-content-center py-5">
+
+    <h1 class="text-center h2 mb-3">Browse University of Idaho Library Digital Collections</h1>
+    
+    <div class="row justify-content-center pb-4">
         <div class="col-md-8 text-center">
             <div class="input-group input-group-lg">
                 <input type="text" class="form-control form-control-lg" id="quickSearch" placeholder="Filter ... ">
@@ -32,7 +35,7 @@ lazyload: true
                         <div class="container px-0" style="position: relative">
                             <img class="card-img-top img-fluid {% unless forloop.index < 7 %} lazyload{% endunless %}" {% unless forloop.index < 7 %}data-{% endunless %}src="{{ '/media/digital/small/' | prepend: site.liburl | append: c.image | append: '.jpg' }}" alt="Image of {{ c.colltitle | escape }}">
                             <div class="highlight text-center py-2 px-2">
-                                <span class="text-white">{{ c.colltitle }}</span>
+                                <span class="">{{ c.colltitle }}</span>
                                 <br>
                                 <a href="{{ c.website }}" class="btn btn-outline-light btn-round btn-sm my-2 mr-1" title="link to {{ c.colltitle | escape }}" target="_blank" rel="noopener">View Collection</a>
                                 <a href="#{{ c.shorttitle | slugify }}" id="collapse-{{ c.shorttitle | slugify }}" data-toggle="collapse" aria-expanded="false" aria-controls="{{ c.shorttitle | slugify }}" class="btn btn-outline-light btn-round btn-sm my-2 ml-1">Details</a>
