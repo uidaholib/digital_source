@@ -15,4 +15,8 @@ The University of Idaho Digital Collections are created using a version of Colle
 
 Simple yet powerful, CollectionBuilder ensures that digital curation and preservation is in the hands of librarians. Read more about CollectionBuilder's minimal-computing approach at <https://collectionbuilder.github.io/>.
 
-The University of Idaho's Digital Initiatives team received a 2019 Institute of Museum and Library Services (IMLS) [National Leadership Grant for Libraries](https://www.imls.gov/grants/awarded/lg-34-19-0064-19) to develop and promote CollectionBuilder. [Contact us](mailto:omwikle@uidaho.edu) if you are interested in learning more about CollectionBuilder.
+The University of Idaho's Digital Initiatives team has received grant funding to support further development of CollectionBuilder, including:
+
+- *National Leadership Grant for Libraries* from the [Institute for Museum and Library Services (IMLS)](https://www.imls.gov/), titled ["Growing CollectionBuilder, A Sustainable Digital Exhibit Framework and Static Web Development Model"](https://www.imls.gov/grants/awarded/lg-252326-ols-22){:target="_blank" rel="noopener"}, 2022 to 2024.
+- [Digital Humanities Advancement grant from the National Endowment for the Humanities (NEH)](https://securegrants.neh.gov/publicquery/main.aspx?f=1&gn=HAA-281018-21)
+- *National Leadership Grant for Libraries* from the [Institute for Museum and Library Services (IMLS)](https://www.imls.gov/grants/awarded/lg-34-19-0064-19){:target="_blank" rel="noopener"}, 2019 to 2021.

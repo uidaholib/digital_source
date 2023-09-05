@@ -8,8 +8,9 @@ layout: page
 <h1 class="py-4">Our Policies</h1>
 
 ## Scanning and Preservation Procedures
-Scans are performed and saved as non-compressed Tiffs and stored on two external hard drives, one of which resides in Moscow and one of which resides in Coeur D'Alene. Tiffs are also backed up to the internal hard drive of computers in the Digital Scholarship Lab, room 211.
 
+Scans are performed and saved as non-compressed Tiffs.
+Complete copies of our scans and metadata are stored in a geo-replicated dark archive drive, as well as external hard drive backups.
 Variable scanning resolutions are described below.
 
 ### Manuscripts/Documents:
