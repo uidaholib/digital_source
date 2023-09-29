@@ -4,8 +4,8 @@
   {% assign collections = site.data.digital_all_collections | where: "status", 'visible' %}
   {% for coll in collections %}
   {% if coll.dateend %}
-  <event start="{{ coll.datestart }}-01-01 10:20:01Z" end="{{ coll.dateend }}-01-01 10:20:01Z" color="" isDuration="true" title="{{ coll.colltitle | strip }}" link="{{coll.website}}" image="https://www.lib.uidaho.edu/media/digital/small/{{coll.image}}.jpg">
-  {{ coll.short_desc }}
+  <event start="{{ coll.datestart }}-01-01 10:20:01Z" end="{{ coll.dateend }}-01-01 10:20:01Z" color="" isDuration="true" title="{{ coll.colltitle | strip | escape}}" link="{{coll.website}}" image="https://www.lib.uidaho.edu/media/digital/small/{{coll.image}}.jpg">
+  {{ coll.short_desc | escape }}
   </event>
   {% endif %}
   {% endfor %}
