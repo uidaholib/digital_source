@@ -13,7 +13,8 @@
         window.open("{{ '/collections.html' | relative_url }}#" + encodeURI(query) , "_self" );
     }
 </script>
-<div id="home-banner" class="jumbotron jumbotron-fluid mt-5 p-0" aria-label="{{ site.data.theme.home-banner-image-title }}">
+
+<div id="home-banner" class="jumbotron jumbotron-fluid p-0 mt-5 mb-0" aria-label="{{ site.data.theme.home-banner-image-title }}">
     <div class="container">
         <div class="row justify-content-center">
             <div id="home-title-box" class="col-md-8 text-center">
@@ -40,7 +41,7 @@
                             {%- endfor -%}
                             <br>
                         <a class="btn btn-info mt-4 mx-2 px-3" href="{{ '/collections.html' | relative_url }}">Browse All Collections</a>
-                        <button type="button" class="btn btn-pride-gold mt-4 mx-2 px-3" id="search-collections-modal-button" data-toggle="modal" data-target="#search-coll-mod">Search Across All Collections</button>
+                        <!--<button type="button" class="btn btn-pride-gold mt-4 mx-2 px-3" id="search-collections-modal-button" data-toggle="modal" data-target="#search-coll-mod">Search Across All Collections</button>-->
                     </div>
                 </div>
             </div>
@@ -48,6 +49,13 @@
     </div>
     
     <div id="feature-image" class="text-right p-1"></div>
+</div>
+
+<div class="alert alert-warning alert-dismissible fade show mb-0 rounded-0" role="alert">
+    <div class="container "><strong>Work in Progress!</strong> Behind the scenes we are migrating our digital repository system to bring better performance and search to our unique collections. Please excuse any disruptions until Jan 2024 as we complete this process!</div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
 </div>
 
 {%- endif -%}
