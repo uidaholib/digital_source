@@ -6,7 +6,7 @@
 {%- assign items = site.data.digital_all_collections | where_exp: 'item','item.metadata_path' -%}
 {%- assign fields = site.data.config-table | map: 'field' -%}
 { "objects": [
-{%- for item in items -%}[ {% for f in fields %}{% if f == 'data' %}"<a target='_blank' href='{{ item.metadata_path }}data/metadata.json' class='btn btn-sm btn-primary m-2'>Metadata JSON</a><a target='_blank' href='{{ item.metadata_path }}data/metadata.csv' class='btn btn-sm btn-outline-primary m-2'>Metadata CSV</a><p class='text-center'>"{% elsif f == 'categories' %}"{% assign subjects = item.categories | split: ';'  %}{% for s in subjects %}{% unless s == 'Idaho' %}<a class='m-1 btn btn-outline-secondary btn-sm' href='{{ 'collections.html' | relative_url }}#{{ s | strip }}'>{{ s }}</a>{% endunless %}{%endfor%}"{% elsif item[f] %}{{ item[f] | jsonify }}{% else %}"n/a"{% endif %},{% endfor %} {{ item.website | jsonify }} ]{% unless forloop.last %},{% endunless %}
+{%- for item in items -%}[ {% for f in fields %}{% if f == 'data' %}"<a target='_blank' href='{{ item.metadata_path }}/data/metadata.json' class='btn btn-sm btn-primary m-2'>Metadata JSON</a><a target='_blank' href='{{ item.metadata_path }}/data/metadata.csv' class='btn btn-sm btn-outline-primary m-2'>Metadata CSV</a><p class='text-center'>"{% elsif f == 'categories' %}"{% assign subjects = item.categories | split: ';'  %}{% for s in subjects %}{% unless s == 'Idaho' %}<a class='m-1 btn btn-outline-secondary btn-sm' href='{{ 'collections.html' | relative_url }}#{{ s | strip }}'>{{ s }}</a>{% endunless %}{%endfor%}"{% elsif item[f] %}{{ item[f] | jsonify }}{% else %}"n/a"{% endif %},{% endfor %} {{ item.website | jsonify }} ]{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ] }
 
