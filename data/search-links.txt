@@ -1,0 +1,6 @@
+---
+# generate a list of all search json
+---
+{%- assign items = site.data.digital_all_collections | where_exp: 'item','item.metadata_path' -%}
+{% for item in items %}{{ item.metadata_path }}/data/search.json
+{% endfor %}
