@@ -9,13 +9,18 @@ layout: page
 
 ## What We Do
 
-The Digital Initiatives department digitizes. That may not come as a surprise, but despite the fact that it is not all we do, digitization -- including the scanning of photographs, feed scanning of books, conversion of legacy files, batch processing of born-digital files, and other tasks -- is the foundation by which we build our collections and web sites and through which we digitally preserve institutional, local and scholarly material and resources.
+The Digital Scholarship and Open Strategies department is responsible for digitizing materials from across the University of Idaho and making them publicly accessible as digital collections, hosted on our own CollectionBuilder platform. This process involves collaborating with student workers to digitize and transcribe material, ingest born digital material, build accurate metadata and design digital spaces specifically for the unique scholarly aspects of each collection. 
 
-But, again, digitizing is not all we do. We also work with departments, schools, librarians, citizens, machines, code, and each other to provide guidance on digital tools, projects and preservation, and to identify, acquire, and promote new collections.
+We also collaborate with departments, schools, librarians and our community to provide guidance on digital tools, projects and preservation and identify, launch and promote new collections.
+
 
 ## Our History
 
-The department was established in 2008 with an initial charge to digitize and make accessible the library's renowned International Jazz Collections. Material from the Jazz Collections continue to be added to this day, and we continue to build on our collections. We currently maintain over a hundred digital collections and applications, and work that begun in the lab has now been incorporated into a library department, Digital Scholarship and Open Strategies, and a University center, the [Center for Digital Inquiry and Learning (CDIL)](https://cdil.lib.uidaho.edu).
+The department was established in 2008 with an initial charge to digitize and make accessible the library’s renowned International Jazz Collections. We currently maintain over a hundred digital collections and applications, and work that began in the lab has now been incorporated into a library department, Digital Scholarship and Open Strategies, with its own physical space, the [Center for Digital Inquiry and Learning (CDIL)](https://cdil.lib.uidaho.edu).
+
+## Our Space
+
+The Center for Digital Inquiry and Learning is located on the second floor of the library building in room 211. The space was originally known as the Lau Periodicals Service Center in the 1990s, through generous donations by David and Ann Lau in honor of David’s parents, Heber and Rhea. The center was re-dedicated in April 2011 to acknowledge its new, digital focus.
 
 ## Our People
 
