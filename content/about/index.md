@@ -21,7 +21,7 @@ The department was established in 2008 with an initial charge to digitize and ma
 
 - [Kevin Dobbins](https://www.lib.uidaho.edu/about/people/kdobbins.html), Digital Labs Manager
 
-- [Klytie Xu](https://www.lib.uidaho.edu/about/people/kxu.html), Digital Projects Manager
+- [Maryelizabeth Koepele](https://www.lib.uidaho.edu/about/people/mkoepele.html), Digital Projects Manager
 
 - [Andrew Weymouth](https://www.lib.uidaho.edu/about/people/aweymouth.html), Digital Initiatives Librarian
 
